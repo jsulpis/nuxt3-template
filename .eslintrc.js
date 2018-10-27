@@ -5,7 +5,7 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: "babel-eslint"
+    "parser": "typescript-eslint-parser"
   },
   extends: [
     "eslint:recommended",
@@ -16,6 +16,7 @@ module.exports = {
   plugins: ["vue"],
   // add your custom rules here
   rules: {
+    "no-unused-vars": "off",
     "no-console": "off",
     "vue/max-attributes-per-line": "off"
   }
