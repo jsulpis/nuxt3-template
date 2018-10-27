@@ -9,3 +9,6 @@ npm-debug.log
 
 # Nuxt generate
 dist
+
+# coverage reports
+test/unit/coverage

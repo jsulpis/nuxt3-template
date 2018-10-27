@@ -12,10 +12,10 @@
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "outDir": "./dist",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
+      "~/*": ["src/*"],
+      "@/*": ["src/*"]
     }
   },
   "exclude": ["./node-modules", "./dist"]

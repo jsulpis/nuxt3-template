@@ -2,10 +2,11 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
+    jest: true
   },
   parserOptions: {
-    "parser": "typescript-eslint-parser"
+    parser: "typescript-eslint-parser"
   },
   extends: [
     "eslint:recommended",
