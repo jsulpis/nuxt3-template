@@ -6,7 +6,7 @@
         nuxt-template
       </h1>
       <h2 class="subtitle">
-        A comprehensive template for nuxt-based projects.
+        {{ message }}
       </h2>
       <div class="links">
         <a
@@ -22,15 +22,28 @@
   </section>
 </template>
 
-<script>
-import AppLogo from "~/components/AppLogo.vue"
+<script lang="ts">
+import Vue from "vue";
+import AppLogo from "../components/AppLogo.vue";
+import Message from "../domain/Message"; // This is a TypeScript class
 
-export default {
+export default Vue.extend({
   components: {
     AppLogo
+  },
+  data() {
+    return { message: "" };
+  },
+  created() {
+    const message = new Message(
+      "A comprehensive template for nuxt-based projects."
+    );
+
+    this.message = message.getContent();
   }
-}
+});
 </script>
+
 
 <style>
 .container {

@@ -20,6 +20,10 @@ module.exports = {
   */
   loading: { color: "#3B8070" },
   /*
+  ** Enable typescript in vue files
+  */
+  modules: ["nuxt-typescript"],
+  /*
   ** Build configuration
   */
   build: {
