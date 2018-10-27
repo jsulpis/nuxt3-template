@@ -14,8 +14,7 @@
     "outDir": "./dist",
     "baseUrl": "./src",
     "paths": {
-      "~/*": ["src/*"],
-      "@/*": ["src/*"]
+      "~/*": ["./*"]
     }
   },
   "exclude": ["./node-modules", "./dist"]
