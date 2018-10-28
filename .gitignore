@@ -1,8 +1,11 @@
+.DS_Store
+
 # dependencies
 node_modules
 
 # logs
 npm-debug.log
+selenium-debug.log
 
 # Nuxt build
 .nuxt
@@ -10,5 +13,14 @@ npm-debug.log
 # Nuxt generate
 dist
 
-# coverage reports
+# tests reports
 test/unit/coverage
+test/e2e/reports
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
