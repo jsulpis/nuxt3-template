@@ -14,7 +14,9 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue,.ts --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate"
   },
   "dependencies": {
     "nuxt": "^2.0.0"
@@ -25,6 +27,7 @@
     "babel-eslint": "^10.0.1",
     "babel-preset-env": "^1.7.0",
     "chromedriver": "^2.43.1",
+    "cross-env": "^5.2.0",
     "cross-spawn": "^6.0.5",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^3.1.0",
