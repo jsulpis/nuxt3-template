@@ -16,7 +16,8 @@
     "lintfix": "eslint --fix --ext .js,.vue,.ts --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
-    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate"
+    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
+    "codacy": "jest --config test/unit/jest.conf.js && cat test/unit/coverage/lcov.info | codacy-coverage"
   },
   "dependencies": {
     "nuxt": "^2.0.0"
@@ -27,6 +28,7 @@
     "babel-eslint": "^10.0.1",
     "babel-preset-env": "^1.7.0",
     "chromedriver": "^2.43.1",
+    "codacy-coverage": "^3.2.0",
     "cross-env": "^5.2.0",
     "cross-spawn": "^6.0.5",
     "eslint": "^4.19.1",
