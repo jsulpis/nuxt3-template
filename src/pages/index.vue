@@ -45,7 +45,9 @@ export default Vue.extend({
 </script>
 
 
-<style>
+<style lang="scss">
+@import "~/assets/scss/_colors.scss";
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -60,7 +62,7 @@ export default Vue.extend({
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: $color-grey;
   letter-spacing: 1px;
 }
 
