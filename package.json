@@ -9,15 +9,13 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
     "unit": "jest --config test/unit/jest.conf.js",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
+    "test:coverage": "jest --config test/unit/jest.conf.js && cat test/unit/coverage/lcov.info | codacy-coverage",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",
-    "lintfix": "eslint --fix --ext .js,.vue,.ts --ignore-path .gitignore .",
-    "precommit": "npm run lint",
-    "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
-    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
-    "codacy": "jest --config test/unit/jest.conf.js && cat test/unit/coverage/lcov.info | codacy-coverage"
+    "lintfix": "eslint --fix --ext .js,.vue,.ts --ignore-path .gitignore ."
   },
   "dependencies": {
     "nuxt": "^2.0.0"
@@ -37,6 +35,7 @@
     "eslint-loader": "^2.1.1",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-vue": "^4.7.1",
+    "husky": "^1.1.2",
     "jest": "^23.6.0",
     "nightwatch": "^0.9.21",
     "nuxt-typescript": "^0.11.0",
@@ -47,5 +46,11 @@
     "typescript": "^3.1.3",
     "typescript-eslint-parser": "^20.0.0",
     "vue-jest": "^3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm test"
+    }
   }
 }
