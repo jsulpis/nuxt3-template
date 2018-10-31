@@ -18,6 +18,7 @@
     "lintfix": "eslint --fix --ext .js,.vue,.ts --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@nuxtjs/google-analytics": "^2.0.2",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {

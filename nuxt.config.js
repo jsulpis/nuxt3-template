@@ -29,7 +29,10 @@ module.exports = {
   /*
   ** Enable typescript in vue files
   */
-  modules: ["nuxt-typescript"],
+  modules: [
+    "nuxt-typescript",
+    ["@nuxtjs/google-analytics", { id: "UA-124217907-3" }]
+  ],
   /*
   ** Change the source directory
   */
