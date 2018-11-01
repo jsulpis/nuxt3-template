@@ -7,16 +7,15 @@ module.exports = {
     console.log("connecting to: " + devServer);
 
     browser
-      .url(devServer)
+      .url(devServer + "/fr")
       .waitForElementVisible("body", 3000)
       .assert.elementPresent(".VueToNuxtLogo")
       .assert.elementCount(".Triangle", 4)
-      .assert.containsText("h1", "nuxt-template")
-      .assert.containsText(
-        "h2",
-        "A comprehensive template for nuxt-based projects."
-      )
-      .assert.elementCount("a", 2)
+      .assert.containsText("h1", "Template Nuxt")
+      .assert.elementCount("a", 3)
+      .click(".language-switcher a")
+      .pause(100)
+      .assert.containsText("h1", "Nuxt Template")
       .end();
   }
 };

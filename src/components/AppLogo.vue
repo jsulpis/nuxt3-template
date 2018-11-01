@@ -8,6 +8,8 @@
 </template>
 
 <script>
+// A default export with a data function is required
+// for the component to be registered in the unit test coverage
 export default {
   data() {
     return {};

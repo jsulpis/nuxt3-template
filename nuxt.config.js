@@ -31,7 +31,25 @@ module.exports = {
   */
   modules: [
     "nuxt-typescript",
-    ["@nuxtjs/google-analytics", { id: "UA-124217907-3" }]
+    ["@nuxtjs/google-analytics", { id: "UA-124217907-3" }],
+    [
+      "nuxt-i18n",
+      {
+        locales: [
+          { code: "en", iso: "en-US", name: "English" },
+          { code: "fr", iso: "fr-FR", name: "Français" }
+        ],
+        defaultLocale: "en",
+        baseUrl: "https://jsulpis.github.io/nuxt-template/",
+        vueI18n: {
+          fallbackLocale: "en",
+          messages: {
+            en: require("./src/locales/en.json"),
+            fr: require("./src/locales/fr.json")
+          }
+        }
+      }
+    ]
   ],
   /*
   ** Change the source directory

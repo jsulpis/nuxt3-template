@@ -17,7 +17,7 @@ module.exports = {
   plugins: ["vue"],
   // add your custom rules here
   rules: {
-    "no-unused-vars": "off",
+    "no-undef": "off",
     "no-console": "off",
     "vue/max-attributes-per-line": "off"
   }

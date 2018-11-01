@@ -1,8 +1,15 @@
-import Message from "~/domain/Message";
+import ButtonTextProvider from "~/services/ButtonTextProvider";
 
-describe("Message.ts", () => {
-  it("has working constructor and getter", () => {
-    const msg = "Hello World !";
-    expect(new Message(msg).getContent()).toBe(msg);
+describe("ButtonTextProvider.ts", () => {
+  const buttonTextProvider = new ButtonTextProvider();
+
+  it("provides correct text for the documentation button", () => {
+    const expectedText = "Documentation";
+    expect(buttonTextProvider.provideDocButtonMessage()).toBe(expectedText);
+  });
+
+  it("provides correct text for the github button", () => {
+    const expectedText = "GitHub";
+    expect(buttonTextProvider.provideGithubButtonMessage()).toBe(expectedText);
   });
 });

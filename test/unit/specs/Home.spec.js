@@ -1,22 +1,23 @@
-import { mount } from "@vue/test-utils";
 import Home from "~/pages/index";
 import AppLogo from "~/components/AppLogo";
+import Translator from "../test-utils/Translator.js";
 
 describe("index.vue", () => {
-  const wrapper = mount(Home);
+  const wrapper = Translator.createComponent(Home);
 
   it("contains the logo", () => {
     expect(wrapper.contains(AppLogo)).toBe(true);
   });
 
-  it("has correct title", () => {
-    const expectedTitle = "nuxt-template";
-    expect(wrapper.find("h1").text()).toBe(expectedTitle);
+  it("renders a title", () => {
+    Translator.checkComponentTranslationForKey(wrapper, "index.title");
   });
 
-  it("has correct subtitle", () => {
-    const expectedSubtitle =
-      "A comprehensive template for nuxt-based projects.";
-    expect(wrapper.find("h2").text()).toBe(expectedSubtitle);
+  it("renders a subtitle", () => {
+    Translator.checkComponentTranslationForKey(wrapper, "index.subtitle");
+  });
+
+  it("renders credits", () => {
+    Translator.checkComponentTranslationForKey(wrapper, "index.credits");
   });
 });

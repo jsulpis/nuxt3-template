@@ -3,21 +3,23 @@
     <div>
       <app-logo/>
       <h1 class="title">
-        nuxt-template
+        {{ $t("index.title") }}
       </h1>
       <h2 class="subtitle">
-        {{ message }}
+        {{ $t("index.subtitle") }}
       </h2>
+      <p>{{ $t("index.credits") }}</p>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
           target="_blank"
-          class="button--green">Documentation</a>
+          class="button--green">{{ docButtonMessage }}</a>
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
-          class="button--grey">GitHub</a>
+          class="button--grey">{{ githubButtonMessage }}</a>
       </div>
+      <lang-switcher/>
     </div>
   </section>
 </template>
@@ -25,21 +27,24 @@
 <script lang="ts">
 import Vue from "vue";
 import AppLogo from "../components/AppLogo.vue";
-import Message from "../domain/Message"; // This is a TypeScript class
+import LangSwitcher from "../components/LangSwitcher.vue";
+import ButtonTextProvider from "../services/ButtonTextProvider"; // This is a TypeScript class
 
 export default Vue.extend({
   components: {
-    AppLogo
+    AppLogo,
+    LangSwitcher
   },
   data() {
-    return { message: "" };
+    return {
+      docButtonMessage: "",
+      githubButtonMessage: ""
+    };
   },
   created() {
-    const message = new Message(
-      "A comprehensive template for nuxt-based projects."
-    );
-
-    this.message = message.getContent();
+    const buttonTextProvider = new ButtonTextProvider();
+    this.docButtonMessage = buttonTextProvider.provideDocButtonMessage();
+    this.githubButtonMessage = buttonTextProvider.provideGithubButtonMessage();
   }
 });
 </script>
