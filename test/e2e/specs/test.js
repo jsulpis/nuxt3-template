@@ -8,13 +8,12 @@ module.exports = {
 
     browser
       .url(devServer + "/fr")
-      .waitForElementVisible("body", 3000)
+      .waitForElementVisible("body", 1000)
       .assert.elementPresent(".VueToNuxtLogo")
       .assert.elementCount(".Triangle", 4)
       .assert.containsText("h1", "Template Nuxt")
       .assert.elementCount("a", 3)
-      .click(".language-switcher a")
-      .pause(100)
+      .click(".lang-switcher a")
       .assert.containsText("h1", "Nuxt Template")
       .end();
   }
