@@ -3,7 +3,7 @@
     <img
       v-for="logo in logos"
       :key="logo"
-      :src="'/logos/' + logo + '.png'"
+      :src="'logos/' + logo + '.png'"
       :alt="logo + '-logo'"
       :title="logo | beautify"
     >
