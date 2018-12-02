@@ -1,10 +1,15 @@
 import { shallowMount } from "@vue/test-utils";
-import NuxtLink from "~/../.nuxt/components/nuxt-link";
-
 import LangSwitcher from "~/components/LangSwitcher";
 
+const NuxtLink = {
+  name: "nuxt-link",
+  render: function(h) {
+    return h("div", this.$slots.default);
+  },
+  props: ["to"]
+};
+
 describe("LangSwitcher.vue", () => {
-  LangSwitcher.components = { "nuxt-link": NuxtLink };
   const wrapper = shallowMount(LangSwitcher, {
     mocks: {
       $i18n: {
@@ -15,7 +20,8 @@ describe("LangSwitcher.vue", () => {
         locale: "en"
       },
       switchLocalePath: jest.fn()
-    }
+    },
+    stubs: { NuxtLink }
   });
 
   it("contains one link", () => {
