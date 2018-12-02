@@ -1,38 +1,35 @@
 <template>
-  <section class="container">
-    <div>
+  <div class="container">
+    <div class="layout">
       <app-logo/>
-      <h1 class="title">
-        {{ $t("index.title") }}
-      </h1>
-      <h2 class="subtitle">
-        {{ $t("index.subtitle") }}
-      </h2>
-      <p>{{ $t("index.credits") }}</p>
+      <h1 class="title">{{ $t("index.title") }}</h1>
+      <dependencies-logos/>
+      <h2 class="subtitle">{{ $t("index.subtitle") }}</h2>
+      <p class="credits">{{ $t("index.credits") }}</p>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">{{ docButtonMessage }}</a>
+        <a href="https://nuxtjs.org/" target="_blank" class="button--green">{{ docButtonMessage }}</a>
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
-          class="button--grey">{{ githubButtonMessage }}</a>
+          class="button--grey"
+        >{{ githubButtonMessage }}</a>
       </div>
-      <lang-switcher/>
+      <lang-switcher class="lang-switcher"/>
     </div>
-  </section>
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import AppLogo from "../components/AppLogo.vue";
+import DependenciesLogos from "../components/DependenciesLogos.vue";
 import LangSwitcher from "../components/LangSwitcher.vue";
 import ButtonTextProvider from "../services/ButtonTextProvider"; // This is a TypeScript class
 
 export default Vue.extend({
   components: {
     AppLogo,
+    DependenciesLogos,
     LangSwitcher
   },
   data() {
@@ -59,6 +56,11 @@ export default Vue.extend({
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 1rem;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 0.75em;
+  }
 }
 
 .title {
@@ -66,20 +68,26 @@ export default Vue.extend({
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 6em;
   color: $color-grey;
-  letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 2.5em;
   color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+}
+
+.credits {
+  margin-top: 0.5em;
+  font-size: 1.2em;
 }
 
 .links {
-  padding-top: 15px;
+  margin-top: 1.5em;
+}
+
+.lang-switcher {
+  margin-top: 0.75em;
 }
 </style>
