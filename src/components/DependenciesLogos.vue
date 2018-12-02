@@ -19,7 +19,15 @@ export default {
   },
   data() {
     return {
-      logos: ["typescript", "eslint", "jest", "nightwatch", "i18n", "analytics"]
+      logos: [
+        "typescript",
+        "eslint",
+        "jest",
+        "nightwatch",
+        "i18n",
+        "travis-CI",
+        "analytics"
+      ]
     };
   }
 };
