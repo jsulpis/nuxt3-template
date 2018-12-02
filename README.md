@@ -1,8 +1,10 @@
-<h1 align="center">Nuxt template</h1>
+<span align="center">
+  
+<h1>Nuxt template</h1>
+<h3>A comprehensive template for nuxt-based projects.</h3>
 
-<h3 align="center">A comprehensive template for nuxt-based projects.</h3>
-<p align="center">
-
+<p>
+  
 [![Build Status](https://travis-ci.org/jsulpis/nuxt-template.svg?branch=master)](https://travis-ci.org/jsulpis/nuxt-template)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/86fbae01c9e747539b33b869142eff69)](https://www.codacy.com/app/jsulpis/nuxt-template?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jsulpis/nuxt-template&amp;utm_campaign=Badge_Grade)
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/86fbae01c9e747539b33b869142eff69)](https://www.codacy.com/app/jsulpis/nuxt-template?utm_source=github.com&utm_medium=referral&utm_content=jsulpis/nuxt-template&utm_campaign=Badge_Coverage)
@@ -10,9 +12,11 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/jsulpis/nuxt-template/master/preview.png" alt="ScreenShot image"/>
-</p>
+<a href="https://jsulpis.github.io/nuxt-template/">
+  <img class="repo-preview" src="https://raw.githubusercontent.com/jsulpis/nuxt-template/master/preview.png" alt="ScreenShot image"/>
+</a>
+
+</span>
 
 ## Introduction
 
