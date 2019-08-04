@@ -2,6 +2,13 @@ language: node_js
 node_js:
   - "8"
 
+dist: trusty
+
+addons:
+  sonarcloud:
+    organization: "jsulpis-github"
+    token: $SONAR_TOKEN
+
 cache:
   directories:
     - "node_modules"
@@ -13,10 +20,16 @@ branches:
 install:
   - npm install
 
-script:
-  - npm run lint
-  - npm run test:coverage
-  - npm run generate:gh-pages
+jobs:
+  include:
+    - stage: lint
+      script: npm run lint
+    - stage: test
+      script: npm run test:coverage
+    - stage: sonar
+      script: sonar-scanner
+    - stage: build
+      script: npm run generate:gh-pages
 
 deploy:
   provider: pages
