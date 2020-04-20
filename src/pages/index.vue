@@ -7,10 +7,20 @@
       <h2 class="subtitle">{{ $t("index.subtitle") }}</h2>
       <p class="credits">{{ $t("index.credits") }}</p>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
+        <a
+          href="https://nuxtjs.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button--green"
+        >
           {{ docButtonMessage }}
         </a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">
+        <a
+          href="https://github.com/nuxt/nuxt.js"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button--grey"
+        >
           {{ githubButtonMessage }}
         </a>
       </div>
