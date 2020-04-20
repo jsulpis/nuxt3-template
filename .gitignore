@@ -14,7 +14,7 @@ selenium-debug.log
 dist
 
 # tests reports
-test/unit/coverage
+coverage
 test/e2e/reports
 
 # Editor directories and files

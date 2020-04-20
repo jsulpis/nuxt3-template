@@ -1,14 +1,13 @@
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
 const routerBase =
-  process.env.DEPLOY_ENV === "GH_PAGES"
-    ? { router: { base: "/nuxt-template/" } }
-    : {};
+  process.env.DEPLOY_ENV === "GH_PAGES" ? { router: { base: "/nuxt-template/" } } : {};
 
 module.exports = {
+  mode: "spa",
   ...routerBase,
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: "nuxt-template",
     meta: [
@@ -23,14 +22,17 @@ module.exports = {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   /*
-  ** Customize the progress bar color
-  */
+   ** Customize the progress bar color
+   */
   loading: { color: "#3B8070" },
   /*
-  ** Enable typescript in vue files
-  */
+   ** Nuxt.js dev-modules
+   */
+  buildModules: ["@nuxt/typescript-build"],
+  /*
+   ** Nuxt.js modules
+   */
   modules: [
-    "nuxt-typescript",
     ["@nuxtjs/google-analytics", { id: "UA-124217907-3" }],
     [
       "nuxt-i18n",
@@ -52,25 +54,16 @@ module.exports = {
     ]
   ],
   /*
-  ** Change the source directory
-  */
+   ** Change the source directory
+   */
   srcDir: "src/",
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** Run ESLint on save
-    */
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: "pre",
-          test: /\.(js|vue|ts)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/
-        });
-      }
-    }
+     ** You can extend webpack config here
+     */
+    extend(config, { isDev, isClient }) {}
   }
 };
