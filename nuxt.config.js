@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   /*
    ** Headers of the page
@@ -22,12 +24,24 @@ module.exports = {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ["@nuxt/typescript-build"],
+  buildModules: [
+    "@nuxtjs/dotenv",
+    "@nuxt/typescript-build",
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: process.env.GA_TRACKING_ID,
+        debug: {
+          enabled: true,
+          sendHitTask: true
+        }
+      }
+    ]
+  ],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    ["@nuxtjs/google-analytics", { id: "UA-124217907-3" }],
     [
       "nuxt-i18n",
       {
