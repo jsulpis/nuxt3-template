@@ -27,20 +27,25 @@ After some research on the Internet, I found Nuxt templates with a lot of good f
 This template started from an application generated with the 'create-nuxt-app' command. Then I added some features.
 
 **TypeScript**
--  Supported in vue files. You can also write your business logic in separate TypeScript files and import it in your components.
+
+- Supported in vue files. You can also write your business logic in separate TypeScript files and import it in your components.
 
 **Linting**
+
 - ESlint
 - Prettier
 
 **Testing Setup**
+
 - Unit tests with Jest
 - E2E tests with Nightwatch
 
 **Internationalisation**
+
 - with nuxt-i18n to translate your app in multiple languages
 
 **Deployment**
+
 - Example of CI/CD on GitHub Pages with Travis-CI
 - Plugin for Google Analytics
 
@@ -56,6 +61,7 @@ cd nuxt-template
 ```
 
 then install all the dependencies.
+
 ```
 npm install
 ```
@@ -73,12 +79,14 @@ npm run dev
 ### Deployment
 
 Build for production and launch server. Your application is then served with server-side rendering (SSR).
+
 ```
 npm run build
 npm start
 ```
 
 Or generate a static project with pre-rendered pages to put directly on your server (or GitHub Pages). This is better for SEO.
+
 ```
 npm run generate
 ```
@@ -97,4 +105,3 @@ Contributions are welcome ! If you improve this template, feel free to share it.
 ## License
 
 Released under the [MIT](https://github.com/jsulpis/nuxt-template/blob/master/LICENSE) license.
-

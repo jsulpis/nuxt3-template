@@ -12,8 +12,8 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "e2e": "node test/e2e/runner.js",
-    "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore .",
-    "lintfix": "eslint --fix --ext .js,.vue,.ts --ignore-path .gitignore ."
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write ."
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.2.3",

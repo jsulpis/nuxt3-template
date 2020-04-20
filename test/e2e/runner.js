@@ -35,12 +35,12 @@ new Builder(nuxt).build().then(() => {
       stdio: "inherit"
     });
 
-    runner.on("exit", function(code) {
+    runner.on("exit", function (code) {
       nuxt.close();
       process.exit(code);
     });
 
-    runner.on("error", function(err) {
+    runner.on("error", function (err) {
       nuxt.close();
       throw err;
     });

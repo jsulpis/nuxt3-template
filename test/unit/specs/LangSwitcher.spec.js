@@ -3,7 +3,7 @@ import LangSwitcher from "~/components/LangSwitcher";
 
 const NuxtLink = {
   name: "nuxt-link",
-  render: function(h) {
+  render: function (h) {
     return h("div", this.$slots.default);
   },
   props: ["to"]

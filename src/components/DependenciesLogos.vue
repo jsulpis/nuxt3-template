@@ -6,7 +6,7 @@
       :src="'logos/' + logo + '.png'"
       :alt="logo + '-logo'"
       :title="logo | beautify"
-    >
+    />
   </div>
 </template>
 

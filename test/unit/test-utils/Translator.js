@@ -19,18 +19,9 @@ export default class Translator {
   }
 
   static checkComponentTranslationForKey(component, translationKey) {
-    Translator.checkThatTranslationKeyExistsIn(
-      Translator.MESSAGES_FR,
-      translationKey
-    );
-    Translator.checkThatTranslationKeyExistsIn(
-      Translator.MESSAGES_EN,
-      translationKey
-    );
-    Translator.checkThatTranslationFunctionCalledWith(
-      component,
-      translationKey
-    );
+    Translator.checkThatTranslationKeyExistsIn(Translator.MESSAGES_FR, translationKey);
+    Translator.checkThatTranslationKeyExistsIn(Translator.MESSAGES_EN, translationKey);
+    Translator.checkThatTranslationFunctionCalledWith(component, translationKey);
   }
 
   static checkThatTranslationKeyExistsIn(messages, translationKey) {
