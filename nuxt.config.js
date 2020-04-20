@@ -1,22 +1,16 @@
-// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-const routerBase =
-  process.env.DEPLOY_ENV === "GH_PAGES" ? { router: { base: "/nuxt-template/" } } : {};
-
 module.exports = {
-  mode: "spa",
-  ...routerBase,
   /*
    ** Headers of the page
    */
   head: {
-    title: "nuxt-template",
+    title: "Nuxtjs Template",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "A comprehensive template for nuxt-based projects."
+        content: "Full-featured template for JAMstack websites using nuxt.js"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
