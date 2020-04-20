@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "es2015"],
-    "strict": true,
-    "module": "es2015",
+    "target": "es2018",
+    "module": "esnext",
     "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "noImplicitThis": false,
-    "removeComments": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true,
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
+    "esModuleInterop": true,
     "allowJs": true,
-    "outDir": "./dist",
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
     "baseUrl": "./src",
+    "outDir": "./dist",
     "paths": {
-      "~/*": ["./*"]
-    }
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    "types": ["@types/node", "@nuxt/types", "@types/jest"]
   },
-  "exclude": ["./node-modules", "./dist"]
+  "exclude": ["node_modules", ".nuxt", "dist"]
 }

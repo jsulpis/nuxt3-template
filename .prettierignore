@@ -1,0 +1,4 @@
+.nuxt
+dist
+coverage
+test/e2e/reports
