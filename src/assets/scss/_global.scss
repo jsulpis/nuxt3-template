@@ -1,0 +1,16 @@
+// Global styling
+
+body {
+  @apply text-center;
+}
+
+html,
+body,
+#__nuxt,
+#__layout {
+  @apply h-full;
+}
+
+#__layout {
+  @apply flex flex-col;
+}

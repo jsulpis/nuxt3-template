@@ -1,5 +1,5 @@
-import Home from "~/pages/index";
-import AppLogo from "~/components/AppLogo";
+import Home from "@/pages/index";
+import AppLogo from "@/components/AppLogo";
 import Translator from "../test-utils/Translator.js";
 
 describe("index.vue", () => {

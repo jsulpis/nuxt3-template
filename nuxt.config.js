@@ -31,7 +31,8 @@ module.exports = {
     [
       "@nuxtjs/tailwindcss",
       {
-        configPath: "../tailwind.config.js" // relative to the src folder
+        configPath: "../tailwind.config.js", // relative to the src folder
+        cssPath: "@/assets/scss/tailwind.scss"
       }
     ],
     [

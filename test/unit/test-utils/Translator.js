@@ -3,11 +3,11 @@ import { has } from "lodash";
 
 export default class Translator {
   static get MESSAGES_EN() {
-    return require("~/locales/en.json");
+    return require("@/locales/en.json");
   }
 
   static get MESSAGES_FR() {
-    return require("~/locales/fr.json");
+    return require("@/locales/fr.json");
   }
 
   static createComponent(component) {

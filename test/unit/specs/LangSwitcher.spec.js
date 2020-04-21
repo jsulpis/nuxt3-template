@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import LangSwitcher from "~/components/LangSwitcher";
+import LangSwitcher from "@/components/LangSwitcher";
 
 const NuxtLink = {
   name: "nuxt-link",

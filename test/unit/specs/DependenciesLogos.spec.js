@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import DependenciesLogos from "~/components/DependenciesLogos";
+import DependenciesLogos from "@/components/DependenciesLogos";
 
 describe("DependenciesLogos.vue", () => {
   const wrapper = mount(DependenciesLogos);

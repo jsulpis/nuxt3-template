@@ -1,4 +1,4 @@
-import ButtonTextProvider from "~/services/ButtonTextProvider";
+import ButtonTextProvider from "@/services/ButtonTextProvider";
 
 describe("ButtonTextProvider.ts", () => {
   const buttonTextProvider = new ButtonTextProvider();

@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import AppLogo from "~/components/AppLogo";
+import AppLogo from "@/components/AppLogo";
 
 describe("AppLogo.vue", () => {
   const wrapper = mount(AppLogo);

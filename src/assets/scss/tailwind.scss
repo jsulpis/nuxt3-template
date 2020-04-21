@@ -1,0 +1,11 @@
+/* purgecss start ignore */
+@import "tailwindcss/base";
+/* purgecss end ignore */
+
+/* Styles using Tailwind utilities */
+@import "./buttons";
+@import "./layout";
+@import "./typography";
+@import "./global";
+
+@import "tailwindcss/utilities";
