@@ -12,17 +12,15 @@
           target="_blank"
           rel="noopener noreferrer"
           class="button--green"
+          >{{ docButtonMessage }}</a
         >
-          {{ docButtonMessage }}
-        </a>
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
+          >{{ githubButtonMessage }}</a
         >
-          {{ githubButtonMessage }}
-        </a>
       </div>
       <lang-switcher class="lang-switcher" />
     </div>
@@ -31,10 +29,10 @@
 
 <script lang="ts">
 import Vue from "vue";
-import AppLogo from "../components/AppLogo.vue";
-import DependenciesLogos from "../components/DependenciesLogos.vue";
-import LangSwitcher from "../components/LangSwitcher.vue";
-import ButtonTextProvider from "../services/ButtonTextProvider"; // This is a TypeScript class
+import AppLogo from "@/components/AppLogo.vue";
+import DependenciesLogos from "@/components/DependenciesLogos.vue";
+import LangSwitcher from "@/components/LangSwitcher.vue";
+import ButtonTextProvider from "@/services/ButtonTextProvider"; // This is a TypeScript class
 
 export default Vue.extend({
   components: {

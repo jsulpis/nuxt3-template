@@ -27,6 +27,13 @@ module.exports = {
   buildModules: [
     "@nuxtjs/dotenv",
     "@nuxt/typescript-build",
+    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+    [
+      "@nuxtjs/tailwindcss",
+      {
+        configPath: "../tailwind.config.js" // relative to the src folder
+      }
+    ],
     [
       "@nuxtjs/google-analytics",
       {
