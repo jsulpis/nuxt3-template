@@ -9,8 +9,7 @@ module.exports = {
     browser
       .url(devServer + "/fr")
       .waitForElementVisible("body", 1000)
-      .assert.elementPresent(".VueToNuxtLogo")
-      .assert.elementCount(".Triangle", 4)
+      .assert.elementPresent(".NuxtLogo")
       .assert.containsText("h1", "Template Nuxt")
       .assert.elementCount("a", 3)
       .click(".lang-switcher a")
