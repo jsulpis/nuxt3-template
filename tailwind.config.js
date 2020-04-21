@@ -19,8 +19,5 @@ module.exports = {
         "90": ".9"
       }
     }
-  },
-  corePlugins: {
-    container: false // custom container class defined in styles/_compounds.scss
   }
 };

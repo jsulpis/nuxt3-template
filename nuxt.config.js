@@ -5,7 +5,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: "Nuxtjs Template",
+    title: "Nuxt.js Template",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -16,6 +16,12 @@ module.exports = {
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+  },
+  /*
+   ** Environment variables
+   */
+  env: {
+    appTitle: "Nuxt.js Template"
   },
   /*
    ** Customize the progress bar color
@@ -38,11 +44,7 @@ module.exports = {
     [
       "@nuxtjs/google-analytics",
       {
-        id: process.env.GA_TRACKING_ID,
-        debug: {
-          enabled: true,
-          sendHitTask: true
-        }
+        id: process.env.GA_TRACKING_ID
       }
     ]
   ],
