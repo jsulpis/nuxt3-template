@@ -21,8 +21,10 @@
     "nuxt-i18n": "^6.9.1"
   },
   "devDependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@nuxt/typescript-build": "^0.6.5",
     "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/google-analytics": "^2.2.3",
     "@nuxtjs/tailwindcss": "^1.4.0",
     "@types/jest": "^25.2.1",

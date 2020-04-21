@@ -31,10 +31,19 @@ module.exports = {
    ** Nuxt.js dev-modules
    */
   buildModules: [
-    "@nuxtjs/dotenv",
     "@nuxt/typescript-build",
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+    "@nuxtjs/dotenv",
     [
+      // Doc: https://github.com/nuxt-community/fontawesome-module
+      "@nuxtjs/fontawesome",
+      {
+        icons: {
+          solid: ["faHeart"]
+        }
+      }
+    ],
+    [
+      // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
       "@nuxtjs/tailwindcss",
       {
         configPath: "../tailwind.config.js", // relative to the src folder
