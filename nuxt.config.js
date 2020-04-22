@@ -1,5 +1,7 @@
 require("dotenv").config();
 
+const APP_TITLE = "Nuxt.js Template";
+
 module.exports = {
   server: {
     host: "0.0.0.0" // Allow to connect other devices on the local network
@@ -8,7 +10,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: "Nuxt.js Template",
+    title: APP_TITLE,
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -16,7 +18,15 @@ module.exports = {
         hid: "description",
         name: "description",
         content: "Full-featured template for JAMstack websites using nuxt.js"
-      }
+      },
+      {
+        hid: "og:description",
+        name: "og:description",
+        content: "Full-featured template for JAMstack websites using nuxt.js"
+      },
+      { hid: "og:title", property: "og:title", content: APP_TITLE },
+      { hid: "og:type", property: "og:type", content: "website" },
+      { hid: "twitter:card", name: "twitter:card", content: "summary" }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
@@ -24,7 +34,8 @@ module.exports = {
    ** Environment variables
    */
   env: {
-    appTitle: "Nuxt.js Template"
+    appTitle: APP_TITLE,
+    appUrl: process.env.URL
   },
   /*
    ** Customize the progress bar color
