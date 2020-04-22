@@ -19,7 +19,7 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
-test/e2e/reports
+e2e/reports
 
 # nyc test coverage
 .nyc_output

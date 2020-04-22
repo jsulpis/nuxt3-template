@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import ContactForm from "@/components/contact/ContactForm.vue";
 import MetaInfoBuilder from "@/utils/MetaInfoBuilder";
 

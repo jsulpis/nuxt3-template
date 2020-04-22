@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import LangSwitcher from "@/components/LangSwitcher";
+import AppLangSwitcher from "@/components/base/AppLangSwitcher";
 
 const NuxtLink = {
   name: "nuxt-link",
@@ -9,8 +9,8 @@ const NuxtLink = {
   props: ["to"]
 };
 
-describe("LangSwitcher.vue", () => {
-  const wrapper = shallowMount(LangSwitcher, {
+describe("AppLangSwitcher.vue", () => {
+  const wrapper = shallowMount(AppLangSwitcher, {
     mocks: {
       $i18n: {
         locales: [
