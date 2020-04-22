@@ -13,7 +13,7 @@ module.exports = {
         height: "height"
       },
       colors: {
-        primary: colors.blue
+        primary: colors.green
       },
       opacity: {
         "90": ".9"

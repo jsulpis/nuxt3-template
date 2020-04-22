@@ -25,6 +25,7 @@ module.exports = {
         content: "Full-featured template for JAMstack websites using nuxt.js"
       },
       { hid: "og:title", property: "og:title", content: APP_TITLE },
+      { hid: "og:url", property: "og:url", content: process.env.URL },
       { hid: "og:type", property: "og:type", content: "website" },
       { hid: "twitter:card", name: "twitter:card", content: "summary" }
     ],

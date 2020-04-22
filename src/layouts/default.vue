@@ -2,9 +2,7 @@
   <div class="flex flex-col w-full h-full">
     <app-header />
     <main class="flex items-center justify-center flex-grow bg-gray-100">
-      <div class="container h-full py-16 mx-auto mt-16 sm:my-auto">
-        <nuxt />
-      </div>
+      <nuxt class="container h-full py-16 mx-auto" />
     </main>
     <app-footer />
   </div>
