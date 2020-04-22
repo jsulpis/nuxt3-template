@@ -53,7 +53,7 @@ module.exports = {
       "@nuxtjs/fontawesome",
       {
         icons: {
-          solid: ["faHeart"]
+          solid: ["faHeart", "faCopy"]
         }
       }
     ],
