@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import AppLogo from "@/components/AppLogo.vue";
+import AppLogo from "@/components/base/AppLogo.vue";
 import LangSwitcher from "@/components/LangSwitcher.vue";
 import ButtonTextProvider from "@/services/ButtonTextProvider"; // This is a TypeScript class
 

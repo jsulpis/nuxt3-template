@@ -1,6 +1,9 @@
 require("dotenv").config();
 
 module.exports = {
+  server: {
+    host: "0.0.0.0" // Allow to connect other devices on the local network
+  },
   /*
    ** Headers of the page
    */
