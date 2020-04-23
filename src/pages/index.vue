@@ -12,12 +12,10 @@
       <NuxtLink to="/docs" class="mx-2 btn btn-primary">Get Started</NuxtLink>
       <a href="https://github.com/jsulpis/nuxtjs-template" class="mx-2 mt-3 btn btn-gray sm:mt-0">Star on GitHub</a>
     </div>
-    <!-- <app-lang-switcher class="lang-switcher" /> -->
   </div>
 </template>
 
 <script>
-import Vue from "vue";
 import AppLogo from "@/components/base/AppLogo.vue";
 import AppLangSwitcher from "@/components/base/AppLangSwitcher.vue";
 import IconList from "@/components/index/IconList.vue";

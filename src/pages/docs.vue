@@ -91,8 +91,11 @@
       Environment).
     </p>
     <ul>
-      <li>NODE_VERSION: <b>12</b> <small>(some packages do not support the default node version on Netlify)</small></li>
-      <li>GA_TRACKING_ID: <b>{yourGoogleAnalyticsTrackingID}</b></li>
+      <li>
+        NODE_VERSION: <span class="font-bold">12</span>
+        <small>(some packages do not support the default node version on Netlify)</small>
+      </li>
+      <li>GA_TRACKING_ID: <span class="font-bold">{yourGoogleAnalyticsTrackingID}</span></li>
       <li>
         the 'URL' variable, which is the main url of the site, is used in the social networks meta tags. You can add it
         to your local <span class="filename">.env</span> file, but note that this is a
@@ -106,8 +109,8 @@
     <h4>Build settings</h4>
     <p>Here are the other settings you can use in the build settings:</p>
     <ul>
-      <li>Build command: <b>yarn generate</b></li>
-      <li>Publish directory: <b>dist</b></li>
+      <li>Build command: <span class="font-bold">yarn generate</span></li>
+      <li>Publish directory: <span class="font-bold">dist</span></li>
     </ul>
   </div>
 </template>
