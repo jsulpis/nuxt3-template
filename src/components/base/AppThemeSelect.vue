@@ -18,7 +18,8 @@ export default {
       themes: [
         { value: "system", label: "System", icon: ["fas", "desktop"] },
         { value: "light", label: "Light", icon: ["far", "sun"] },
-        { value: "dark", label: "Dark", icon: ["fas", "moon"] }
+        { value: "dark", label: "Dark", icon: ["fas", "moon"] },
+        { value: "rainbow", label: "Rainbow", icon: ["fas", "rainbow"] }
       ]
     };
   }

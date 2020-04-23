@@ -51,7 +51,7 @@ module.exports = {
     [
       // Doc: https://github.com/nuxt-community/fontawesome-module
       "@nuxtjs/fontawesome",
-      { icons: { solid: ["faHeart", "faCopy", "faMoon", "faDesktop"], regular: ["faSun"] } }
+      { icons: { solid: ["faHeart", "faCopy", "faMoon", "faDesktop", "faRainbow"], regular: ["faSun"] } }
     ],
     [
       // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
@@ -63,7 +63,7 @@ module.exports = {
     ],
     ["@nuxtjs/google-analytics", { id: process.env.GA_TRACKING_ID }],
     // Doc: https://github.com/nuxt-community/color-mode-module
-    "@nuxtjs/color-mode"
+    ["@nuxtjs/color-mode", { preference: "light" }]
   ],
   purgeCSS: {
     whitelistPatterns: ["dark-mode", /svg.*/, /fa.*/] // Keep Fontawesome classes
