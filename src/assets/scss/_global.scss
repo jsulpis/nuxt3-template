@@ -1,0 +1,13 @@
+// Global styling
+
+body {
+  @apply text-center;
+}
+
+html,
+body,
+body > div,
+body > div > div,
+body > div > div > div {
+  @apply h-full;
+}

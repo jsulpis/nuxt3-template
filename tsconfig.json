@@ -10,6 +10,7 @@
     "strict": true,
     "noEmit": true,
     "experimentalDecorators": true,
+    "noUnusedLocals": true,
     "removeComments": true,
     "baseUrl": "./src",
     "outDir": "./dist",

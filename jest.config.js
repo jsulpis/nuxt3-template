@@ -10,5 +10,5 @@ module.exports = {
     "^.+\\.js$": "babel-jest",
     ".*\\.(vue)$": "vue-jest"
   },
-  testPathIgnorePatterns: ["<rootDir>/test/e2e"]
+  testPathIgnorePatterns: ["<rootDir>/e2e"]
 };

@@ -1,4 +1,4 @@
 .nuxt
 dist
 coverage
-test/e2e/reports
+e2e/reports
