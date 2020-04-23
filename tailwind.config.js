@@ -17,6 +17,17 @@ module.exports = {
       },
       opacity: {
         "90": ".9"
+      },
+      textColor: {
+        default: "var(--color-text-default)",
+        strong: "var(--color-text-strong)",
+        faded: "var(--color-text-faded)"
+      },
+      backgroundColor: {
+        default: "var(--color-bg-default)",
+        surface: "var(--color-bg-surface)",
+        accent: "var(--color-bg-accent)",
+        text: "var(--color-text-default)"
       }
     }
   }

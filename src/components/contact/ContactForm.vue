@@ -9,7 +9,7 @@
         rows="4"
         cols="80"
         id="message"
-        class="w-full px-3 py-3 text-sm placeholder-gray-400 bg-white rounded shadow focus:outline-none focus:shadow-outline"
+        class="w-full px-3 py-3 text-sm placeholder-gray-400 rounded shadow bg-surface focus:outline-none focus:shadow-outline"
         placeholder="Type a message..."
       />
     </div>

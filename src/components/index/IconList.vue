@@ -14,9 +14,10 @@ const icons = [
   { name: "Prettier", file: "prettier-icon.svg" },
   { name: "Tailwind CSS", file: "tailwindcss-icon.svg" },
   { name: "PurgeCSS", file: "purgecss-icon.png" },
+  { name: "Color themes", file: "color-mode-icon.png" },
   { name: "Sass", file: "sass-icon.svg" },
   { name: "Font Awesome", file: "font-awesome-icon.svg" },
-  { name: "SonarCloud", file: "sonarcloud-icon.jpg" },
+  { name: "SonarCloud", file: "sonarcloud-icon.png" },
   { name: "Travis CI", file: "travis-ci-icon.svg" },
   { name: "Google Analytics", file: "google-analytics-icon.svg" }
 ];

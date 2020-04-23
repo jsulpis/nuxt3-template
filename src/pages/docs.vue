@@ -141,7 +141,11 @@ li {
 }
 
 a {
-  @apply text-primary-700 font-semibold;
+  @apply text-primary-500 font-semibold;
+
+  &:hover {
+    @apply opacity-75;
+  }
 }
 
 .filename {
