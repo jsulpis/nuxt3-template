@@ -66,7 +66,8 @@ module.exports = {
     ["@nuxtjs/color-mode", { preference: "light" }]
   ],
   purgeCSS: {
-    whitelistPatterns: ["dark-mode", /svg.*/, /fa.*/] // Keep Fontawesome classes
+    whitelist: ["__nuxt", "__layout", "dark-mode"],
+    whitelistPatterns: [/svg.*/, /fa.*/] // Keep Fontawesome classes
   },
   /*
    ** Nuxt.js modules

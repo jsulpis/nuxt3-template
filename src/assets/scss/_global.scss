@@ -6,8 +6,8 @@ body {
 
 html,
 body,
-body > div,
-body > div > div,
-body > div > div > div {
+#__nuxt,
+#__layout,
+#__layout > div {
   @apply h-full;
 }
