@@ -30,6 +30,8 @@
     "@types/jest": "^25.2.1",
     "@vue/test-utils": "^1.0.0-beta.33",
     "babel-jest": "^25.4.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
     "chromedriver": "^81.0.0",
     "cross-env": "^7.0.2",
     "husky": "^4.2.5",
