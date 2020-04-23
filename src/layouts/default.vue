@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full h-full">
+  <div class="flex flex-col">
     <app-header />
     <main class="flex items-center justify-center flex-grow bg-gray-100">
       <nuxt class="container h-full py-16 mx-auto" />

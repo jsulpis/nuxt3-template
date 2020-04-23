@@ -72,6 +72,9 @@ module.exports = {
       }
     ]
   ],
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /fa.*/] // Keep Fontawesome classes
+  },
   /*
    ** Nuxt.js modules
    */
