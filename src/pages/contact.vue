@@ -1,24 +1,17 @@
 <template>
   <div class="text-left">
-    <h2 class="mt-16">Contact</h2>
-    <p>This is not an actual contact form. It will send a Google Analytics event on submit to show how to do it.</p>
-
+    <h2 class="mt-16">{{ $t("contact.title") }}</h2>
+    <p>{{ $t("contact.info") }}</p>
     <ContactForm />
   </div>
 </template>
 
 <script>
 import ContactForm from "@/components/contact/ContactForm.vue";
-import MetaInfoBuilder from "@/utils/MetaInfoBuilder";
 
 export default {
   components: {
     ContactForm
-  },
-  head: new MetaInfoBuilder()
-    .title("Contact")
-    .description("This is the contact page.")
-    .url(process.env.appUrl + "/contact")
-    .build()
+  }
 };
 </script>

@@ -1,50 +1,34 @@
 <template>
   <div class="inline-flex">
-    <button
+    <app-button-select
       v-for="theme in themes"
+      :key="theme.value"
       @click="$colorMode.preference = theme.value"
+      class="inline-flex flex-wrap items-center justify-center"
       :class="{ active: $colorMode.preference === theme.value }"
     >
       <FontAwesomeIcon :icon="theme.icon" size="sm" class="mr-1" />
-      {{ theme.label }}
-    </button>
+      {{ $t("theme." + theme.value) }}
+    </app-button-select>
   </div>
 </template>
 
 <script>
+import AppButtonSelect from "@/components/base/AppButtonSelect.vue";
+
 export default {
+  components: {
+    AppButtonSelect
+  },
   data() {
     return {
       themes: [
-        { value: "system", label: "System", icon: ["fas", "desktop"] },
-        { value: "light", label: "Light", icon: ["far", "sun"] },
-        { value: "dark", label: "Dark", icon: ["fas", "moon"] },
-        { value: "rainbow", label: "Rainbow", icon: ["fas", "rainbow"] }
+        { value: "system", icon: ["fas", "desktop"] },
+        { value: "light", icon: ["far", "sun"] },
+        { value: "dark", icon: ["fas", "moon"] },
+        { value: "rainbow", icon: ["fas", "rainbow"] }
       ]
     };
   }
 };
 </script>
-
-<style scoped>
-button {
-  @apply px-3 py-1 text-sm font-bold bg-gray-300 text-gray-600;
-
-  &.active,
-  &:hover {
-    @apply bg-gray-400 text-gray-800;
-  }
-
-  &:focus {
-    @apply outline-none;
-  }
-
-  &:first-child {
-    @apply rounded-l-full;
-  }
-
-  &:last-child {
-    @apply rounded-r-full;
-  }
-}
-</style>

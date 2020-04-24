@@ -5,7 +5,7 @@ describe("ContactForm", () => {
   let wrapper, vm;
 
   beforeEach(() => {
-    wrapper = mount(ContactForm);
+    wrapper = mount(ContactForm, { mocks: { $t: s => s } });
     vm = wrapper.vm;
     vm.$ga = { event: jest.fn() };
   });
@@ -28,7 +28,7 @@ describe("ContactForm", () => {
 
     // Then
     expect(vm.$ga.event).not.toHaveBeenCalled();
-    expect(wrapper.find(".error-message").text()).toBe("You can't send an empty message !");
+    expect(wrapper.find(".error-message").text()).toBe("contact.error-empty");
   });
 
   it("should remove the error message if a valid message is sent", async () => {

@@ -1,6 +1,5 @@
 <template>
-  <div class="text-left">
-    <h2 class="mt-16">Documentation</h2>
+  <div>
     <h3>Installation</h3>
     <ul>
       <li>
@@ -116,15 +115,9 @@
 </template>
 
 <script>
-import MetaInfoBuilder from "@/utils/MetaInfoBuilder";
 import CodeBlock from "@/components/docs/CodeBlock.vue";
 
 export default {
-  head: new MetaInfoBuilder()
-    .title("Documentation")
-    .description("Documentation for the template.")
-    .url(process.env.appUrl + "/docs")
-    .build(),
   components: {
     CodeBlock
   }
