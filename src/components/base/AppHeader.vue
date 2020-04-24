@@ -47,6 +47,6 @@ export default {
 
 <style scoped>
 ul .nuxt-link-exact-active {
-  @apply opacity-50;
+  @apply text-primary-500;
 }
 </style>
