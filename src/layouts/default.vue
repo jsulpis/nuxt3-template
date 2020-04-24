@@ -20,21 +20,19 @@ export default Vue.extend({
     if (!!this.$route && !!this.$route.name) {
       routeName = this.$route.name.split("_")[0];
     }
-    return (
-      new MetaInfoBuilder()
+    return {
+      // @ts-ignore
+      ...this.$nuxtI18nSeo(),
+      ...new MetaInfoBuilder()
         // @ts-ignore
         .title(this.$t(routeName + ".title"))
         // @ts-ignore
         .description(this.$t(routeName + ".description"))
         .url(process.env.appUrl + this.$route.path)
+        .type("website")
+        .twitterCard("summary")
         .build()
-    );
-    // return {
-    //   meta: [
-    //     { hid: "og:type", property: "og:type", content: "website" },
-    //     { hid: "twitter:card", name: "twitter:card", content: "summary" }
-    //   ]
-    // };
+    };
   },
   components: {
     AppHeader,
