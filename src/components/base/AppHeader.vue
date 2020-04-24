@@ -19,7 +19,7 @@
       <div class="flex overflow-hidden duration-200 transition-height md:h-auto" :class="isExpanded ? 'h-24' : 'h-0'">
         <ul class="flex flex-col list-none md:flex-row">
           <li v-for="route in routes" :key="route.href" class="py-1 text-left">
-            <nuxt-link :to="route.href" class="px-3 font-semibold hover:opacity-50">
+            <nuxt-link :to="route.href" class="px-3 font-semibold">
               {{ route.label }}
             </nuxt-link>
           </li>
@@ -48,5 +48,9 @@ export default {
 <style scoped>
 ul .nuxt-link-exact-active {
   @apply text-primary-500;
+}
+
+ul a:not(.nuxt-link-exact-active):hover {
+  @apply opacity-50;
 }
 </style>
