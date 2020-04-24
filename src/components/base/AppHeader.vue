@@ -1,5 +1,5 @@
 <template>
-  <header class="absolute top-0 z-50 w-full bg-white shadow-lg">
+  <header class="absolute top-0 z-50 w-full shadow-lg bg-surface">
     <nav class="container flex flex-wrap items-center justify-between px-2 py-3 mx-auto">
       <div class="relative flex justify-between w-full px-3 md:w-auto md:static md:block md:justify-start">
         <nuxt-link to="/" class="inline-block py-2 text-lg font-bold">
@@ -11,9 +11,9 @@
           @click="isExpanded = !isExpanded"
           @blur="isExpanded = false"
         >
-          <span class="block w-6 h-px bg-gray-700 rounded-sm"></span>
-          <span class="block w-6 h-px mt-1 bg-gray-700 rounded-sm"></span>
-          <span class="block w-6 h-px mt-1 bg-gray-700 rounded-sm"></span>
+          <span class="block w-6 h-px rounded-sm bg-text"></span>
+          <span class="block w-6 h-px mt-1 rounded-sm bg-text"></span>
+          <span class="block w-6 h-px mt-1 rounded-sm bg-text"></span>
         </button>
       </div>
       <div class="flex overflow-hidden duration-200 transition-height md:h-auto" :class="isExpanded ? 'h-24' : 'h-0'">
@@ -47,6 +47,6 @@ export default {
 
 <style scoped>
 ul .nuxt-link-exact-active {
-  @apply opacity-50;
+  @apply text-primary-500;
 }
 </style>

@@ -1,0 +1,44 @@
+:root {
+  --color-bg-default: theme("colors.gray.100");
+  --color-bg-accent: theme("colors.gray.200");
+  --color-bg-surface: theme("colors.white");
+
+  --color-text-default: theme("colors.gray.700");
+  --color-text-strong: theme("colors.gray.900");
+}
+
+/*! purgecss start ignore */
+.dark-mode {
+  --color-bg-default: theme("colors.gray.700");
+  --color-bg-accent: theme("colors.gray.800");
+  --color-bg-surface: theme("colors.gray.600");
+
+  --color-text-default: theme("colors.gray.100");
+  --color-text-strong: theme("colors.gray.400");
+}
+
+.rainbow-mode {
+  --color-bg-default: theme("colors.blue.200");
+  --color-bg-accent: theme("colors.orange.200");
+  --color-bg-surface: theme("colors.yellow.200");
+
+  --color-text-default: theme("colors.gray.700");
+  --color-text-strong: theme("colors.gray.800");
+
+  body {
+    @apply font-serif;
+  }
+}
+/*! purgecss end ignore */
+
+body {
+  color: var(--color-text-default);
+  transition: color 15ms;
+}
+
+.bg-default,
+.bg-accent,
+.bg-surface,
+.bg-text {
+  transition: background-color 150ms;
+}

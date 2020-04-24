@@ -1,8 +1,9 @@
 <template>
-  <footer class="relative p-6 text-sm bg-gray-200">
+  <footer class="relative p-6 text-sm bg-accent">
     <div class="container px-4 mx-auto">
       <div class="flex flex-wrap items-end">
         <div class="w-full px-4 text-base lg:w-6/12">
+          <app-theme-select class="mb-2" />
           <p>
             Theme:
             <footer-link href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation">
@@ -60,10 +61,12 @@
 </template>
 
 <script>
+import AppThemeSelect from "@/components/base/AppThemeSelect.vue";
+
 const FooterLink = {
   functional: true,
   render: (h, { data, children }) => (
-    <a href={data.attrs.href} class="font-semibold hover:text-gray-900">
+    <a href={data.attrs.href} class="font-semibold hover:opacity-75">
       {children}
     </a>
   )
@@ -71,7 +74,8 @@ const FooterLink = {
 
 export default {
   components: {
-    FooterLink
+    FooterLink,
+    AppThemeSelect
   }
 };
 </script>
