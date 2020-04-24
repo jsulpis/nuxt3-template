@@ -4,7 +4,7 @@
 
 <style scoped>
 button {
-  @apply px-3 py-1 text-sm font-bold bg-gray-300 text-gray-600;
+  @apply px-4 py-1 text-sm font-bold bg-gray-300 text-gray-600;
 
   &.active,
   &:hover {

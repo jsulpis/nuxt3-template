@@ -4,6 +4,7 @@
       v-for="theme in themes"
       :key="theme.value"
       @click="$colorMode.preference = theme.value"
+      class="inline-flex flex-wrap items-center justify-center"
       :class="{ active: $colorMode.preference === theme.value }"
     >
       <FontAwesomeIcon :icon="theme.icon" size="sm" class="mr-1" />

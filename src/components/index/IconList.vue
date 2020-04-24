@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex flex-wrap justify-center mt-8 sm:w-3/4 xl:w-1/2">
+  <div class="container flex flex-wrap justify-center mt-8 sm:w-3/4 xl:w-2/3">
     <IconItem v-for="icon in icons" :name="icon.name" :key="icon.name" :file="icon.file" />
   </div>
 </template>
@@ -17,6 +17,7 @@ const icons = [
   { name: "Color themes", file: "color-mode-icon.png" },
   { name: "Sass", file: "sass-icon.svg" },
   { name: "Font Awesome", file: "font-awesome-icon.svg" },
+  { name: "i18n", file: "i18n-icon.png" },
   { name: "SonarCloud", file: "sonarcloud-icon.png" },
   { name: "Travis CI", file: "travis-ci-icon.svg" },
   { name: "Google Analytics", file: "google-analytics-icon.svg" }

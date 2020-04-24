@@ -1,10 +1,10 @@
 <template>
-  <footer class="relative p-6 text-sm bg-accent">
-    <div class="container px-4 mx-auto">
+  <footer class="relative py-6 text-sm bg-accent">
+    <div class="container mx-auto">
       <div class="flex flex-wrap items-end">
-        <div class="w-full px-4 text-base lg:w-6/12">
+        <div class="w-full text-base lg:w-6/12">
           <app-lang-select />
-          <app-theme-select class="m-2" />
+          <app-theme-select class="my-2" />
           <p>
             {{ $t("footer.theme") }}:
             <footer-link href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation">

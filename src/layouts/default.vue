@@ -20,11 +20,15 @@ export default Vue.extend({
     if (!!this.$route && !!this.$route.name) {
       routeName = this.$route.name.split("_")[0];
     }
-    return new MetaInfoBuilder()
-      .title(this.$t(routeName + ".title"))
-      .description(this.$t(routeName + ".description"))
-      .url(process.env.appUrl + this.$route.path)
-      .build();
+    return (
+      new MetaInfoBuilder()
+        // @ts-ignore
+        .title(this.$t(routeName + ".title"))
+        // @ts-ignore
+        .description(this.$t(routeName + ".description"))
+        .url(process.env.appUrl + this.$route.path)
+        .build()
+    );
     // return {
     //   meta: [
     //     { hid: "og:type", property: "og:type", content: "website" },
