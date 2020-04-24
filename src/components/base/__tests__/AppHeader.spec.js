@@ -4,7 +4,6 @@ import AppHeader from "../AppHeader";
 describe("AppHeader", () => {
   it("should have a link to the home page with the name of the app", () => {
     // Given
-    const APP_TITLE = "My App Title";
     const wrapper = mount(AppHeader, {
       stubs: { "nuxt-link": RouterLinkStub },
       mocks: { $t: s => s, localePath: p => p }
