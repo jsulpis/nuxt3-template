@@ -3,7 +3,8 @@
     <div class="container px-4 mx-auto">
       <div class="flex flex-wrap items-end">
         <div class="w-full px-4 text-base lg:w-6/12">
-          <app-theme-select class="mb-2" />
+          <app-lang-select />
+          <app-theme-select class="m-2" />
           <p>
             Theme:
             <footer-link href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation">
@@ -62,6 +63,7 @@
 
 <script>
 import AppThemeSelect from "@/components/base/AppThemeSelect.vue";
+import AppLangSelect from "@/components/base/AppLangSelect.vue";
 
 const FooterLink = {
   functional: true,
@@ -75,7 +77,8 @@ const FooterLink = {
 export default {
   components: {
     FooterLink,
-    AppThemeSelect
+    AppThemeSelect,
+    AppLangSelect
   }
 };
 </script>

@@ -17,14 +17,12 @@
 
 <script>
 import AppLogo from "@/components/base/AppLogo.vue";
-import AppLangSwitcher from "@/components/base/AppLangSwitcher.vue";
 import IconList from "@/components/index/IconList.vue";
 
 export default {
   name: "Home",
   components: {
     AppLogo,
-    AppLangSwitcher,
     IconList
   }
 };
