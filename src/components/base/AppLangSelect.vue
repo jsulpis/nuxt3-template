@@ -23,8 +23,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-img {
-}
-</style>

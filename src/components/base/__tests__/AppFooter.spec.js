@@ -4,7 +4,8 @@ import AppFooter from "@/components/base/AppFooter";
 describe("AppFooter", () => {
   it("should have a link to my profile", () => {
     const wrapper = mount(AppFooter, {
-      stubs: ["FontAwesomeIcon"]
+      stubs: ["FontAwesomeIcon"],
+      mocks: { $t: () => {}, $i18n: { locales: [] }, $colorMode: {} }
     });
 
     const link = wrapper.find("a[href='https://github.com/jsulpis'");
