@@ -6,44 +6,44 @@
           <app-lang-select />
           <app-theme-select class="m-2" />
           <p>
-            Theme:
+            {{ $t("footer.theme") }}:
             <footer-link href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation">
               Tailwind Starter Kit
             </footer-link>
-            by <footer-link href="https://www.creative-tim.com">Creative Tim</footer-link>.
+            {{ $t("footer.by") }} <footer-link href="https://www.creative-tim.com">Creative Tim</footer-link>.
           </p>
         </div>
         <div class="flex flex-wrap w-full px-4 lg:w-6/12 lg:text-left">
           <div class="w-full px-4 mt-3 lg:w-5/12">
             <span class="block mb-1 text-sm font-semibold uppercase opacity-75">
-              Useful Links
+              {{ $t("footer.useful-links") }}
             </span>
             <ul class="list-unstyled">
               <li>
                 <footer-link href="https://www.netlify.com/jamstack/">
-                  About the JAMstack
+                  {{ $t("footer.jamstack") }}
                 </footer-link>
               </li>
               <li>
                 <footer-link href="https://nextjs-template.juliensulpis.now.sh">
-                  Next.js Template
+                  {{ $t("footer.next-js") }}
                 </footer-link>
               </li>
             </ul>
           </div>
           <div class="w-full px-4 mt-3 lg:w-5/12">
             <span class="block mb-1 text-sm font-semibold uppercase opacity-75">
-              About
+              {{ $t("footer.about") }}
             </span>
             <ul class="list-unstyled">
               <li>
                 <footer-link href="https://github.com/jsulpis/nuxtjs-template">
-                  Star on GitHub
+                  {{ $t("footer.star-on-github") }}
                 </footer-link>
               </li>
               <li>
                 <footer-link href="https://github.com/jsulpis/nuxtjs-template/blob/master/LICENSE">
-                  MIT License
+                  {{ $t("footer.license") }}
                 </footer-link>
               </li>
             </ul>
@@ -53,8 +53,8 @@
       <hr class="mt-3 mb-6 border-gray-400" />
       <div class="w-full mx-auto">
         <p class="py-1 text-sm">
-          © {{ new Date().getFullYear() }} made with <FontAwesomeIcon icon="heart" size="xs" /> by
-          <footer-link href="https://github.com/jsulpis">Julien Sulpis</footer-link>.
+          © {{ new Date().getFullYear() }} {{ $t("footer.made-with") }} <FontAwesomeIcon icon="heart" size="xs" />
+          {{ $t("footer.by") }} <footer-link href="https://github.com/jsulpis">Julien Sulpis</footer-link>.
         </p>
       </div>
     </div>

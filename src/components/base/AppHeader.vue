@@ -2,8 +2,8 @@
   <header class="absolute top-0 z-50 w-full shadow-lg bg-surface">
     <nav class="container flex flex-wrap items-center justify-between px-2 py-3 mx-auto">
       <div class="relative flex justify-between w-full px-3 md:w-auto md:static md:block md:justify-start">
-        <nuxt-link to="/" class="inline-block py-2 text-lg font-bold">
-          {{ appTitle }}
+        <nuxt-link :to="localePath('/')" class="inline-block py-2 text-lg font-bold">
+          {{ $t("index.title") }}
         </nuxt-link>
         <button
           class="px-3 py-1 text-xl outline-none md:hidden focus:outline-none"
@@ -19,8 +19,8 @@
       <div class="flex overflow-hidden duration-200 transition-height md:h-auto" :class="isExpanded ? 'h-24' : 'h-0'">
         <ul class="flex flex-col list-none md:flex-row">
           <li v-for="route in routes" :key="route.href" class="py-1 text-left">
-            <nuxt-link :to="route.href" class="px-3 font-semibold">
-              {{ route.label }}
+            <nuxt-link :to="localePath(route.href)" class="px-3 font-semibold">
+              {{ $t(route.label) }}
             </nuxt-link>
           </li>
         </ul>
@@ -33,12 +33,11 @@
 export default {
   data() {
     return {
-      appTitle: process.env.appTitle,
       isExpanded: false,
       routes: [
-        { href: "/", label: "Home" },
-        { href: "/docs", label: "Documentation" },
-        { href: "/contact", label: "Contact" }
+        { href: "/", label: "header.home" },
+        { href: "/documentation", label: "header.documentation" },
+        { href: "/contact", label: "header.contact" }
       ]
     };
   }

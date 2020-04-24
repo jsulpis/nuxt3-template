@@ -7,7 +7,7 @@
       :class="{ active: $colorMode.preference === theme.value }"
     >
       <FontAwesomeIcon :icon="theme.icon" size="sm" class="mr-1" />
-      {{ theme.label }}
+      {{ $t("theme." + theme.value) }}
     </app-button-select>
   </div>
 </template>
@@ -22,10 +22,10 @@ export default {
   data() {
     return {
       themes: [
-        { value: "system", label: "System", icon: ["fas", "desktop"] },
-        { value: "light", label: "Light", icon: ["far", "sun"] },
-        { value: "dark", label: "Dark", icon: ["fas", "moon"] },
-        { value: "rainbow", label: "Rainbow", icon: ["fas", "rainbow"] }
+        { value: "system", icon: ["fas", "desktop"] },
+        { value: "light", icon: ["far", "sun"] },
+        { value: "dark", icon: ["fas", "moon"] },
+        { value: "rainbow", icon: ["fas", "rainbow"] }
       ]
     };
   }

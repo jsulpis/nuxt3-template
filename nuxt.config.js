@@ -10,25 +10,9 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: APP_TITLE,
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        hid: "description",
-        name: "description",
-        content: "Full-featured template for JAMstack websites using nuxt.js"
-      },
-      {
-        hid: "og:description",
-        name: "og:description",
-        content: "Full-featured template for JAMstack websites using nuxt.js"
-      },
-      { hid: "og:title", property: "og:title", content: APP_TITLE },
-      { hid: "og:url", property: "og:url", content: process.env.URL },
-      { hid: "og:type", property: "og:type", content: "website" },
-      { hid: "twitter:card", name: "twitter:card", content: "summary" }
-    ],
+    // Only headers common to all pages and all languages.
+    // The others are defined in the layout component.
+    meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   /*
@@ -81,7 +65,7 @@ module.exports = {
           { code: "fr", iso: "fr-FR", name: "Français" }
         ],
         defaultLocale: "en",
-        baseUrl: "https://jsulpis.github.io/nuxt-template/",
+        baseUrl: process.env.URL,
         vueI18n: {
           fallbackLocale: "en",
           messages: {
