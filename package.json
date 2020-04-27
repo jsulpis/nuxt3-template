@@ -8,18 +8,21 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "serve:static": "serve dist -l 3000",
     "lint": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cy:verify": "cypress verify",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "dependencies": {
     "lodash": "^4.17.15",
     "nuxt": "^2.12.2",
-    "nuxt-i18n": "^6.9.1"
+    "nuxt-i18n": "^6.9.1",
+    "serve": "^11.3.0"
   },
   "devDependencies": {
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
