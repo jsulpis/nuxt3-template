@@ -2,9 +2,7 @@ describe("Header", () => {
   describe("on desktop", () => {
     beforeEach(() => {
       cy.viewport("macbook-15");
-      cy.visit("/", {
-        headers: { "Accept-Language": "en-US" }
-      });
+      cy.visit("/");
     });
 
     it("has a link to all the pages", () => {
@@ -29,9 +27,7 @@ describe("Header", () => {
   describe("on mobile", () => {
     beforeEach(() => {
       cy.viewport("samsung-s10");
-      cy.visit("/", {
-        headers: { "Accept-Language": "en-US" }
-      });
+      cy.visit("/");
     });
 
     it("has a link to all the pages", () => {

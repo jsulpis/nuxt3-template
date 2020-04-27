@@ -1,9 +1,7 @@
 describe("Footer", () => {
   beforeEach(() => {
     cy.viewport("macbook-15");
-    cy.visit("/", {
-      headers: { "Accept-Language": "en-US" }
-    });
+    cy.visit("/");
   });
 
   it("contains a link to my profile", () => {

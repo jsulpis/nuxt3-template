@@ -1,9 +1,7 @@
 describe("Home Page", () => {
   beforeEach(() => {
     cy.viewport("macbook-15");
-    cy.visit("/", {
-      headers: { "Accept-Language": "en-US" }
-    });
+    cy.visit("/");
   });
 
   it("has a title, a header, a main section and a footer", () => {

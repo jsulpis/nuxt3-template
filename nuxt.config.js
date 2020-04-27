@@ -72,7 +72,10 @@ module.exports = {
             en: require("./src/locales/en.json"),
             fr: require("./src/locales/fr.json")
           }
-        }
+        },
+        // Activate the language detection only on deployments
+        // Mostly to avoid headache with the e2e tests
+        detectBrowserLanguage: !!process.env.NETLIFY
       }
     ]
   ],

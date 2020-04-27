@@ -1,9 +1,7 @@
 describe("Contact Page", () => {
   beforeEach(() => {
     cy.viewport("macbook-15");
-    cy.visit("/contact", {
-      headers: { "Accept-Language": "en-US" }
-    });
+    cy.visit("/contact");
   });
 
   it("has a title, a header, a main section and a footer", () => {
