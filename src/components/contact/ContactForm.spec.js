@@ -10,39 +10,81 @@ describe("ContactForm", () => {
     vm.$ga = { event: jest.fn() };
   });
 
-  it("should send a Google Analytics event when submitting the form", () => {
-    // Given
-    wrapper.find("textarea").setValue("valid message");
+  describe("when submitting a valid message", () => {
+    it("should send a Google Analytics event", () => {
+      // Given
+      wrapper.find("textarea").setValue("valid message");
 
-    // When
-    wrapper.find("form").trigger("submit");
+      // When
+      wrapper.find("form").trigger("submit");
 
-    // Then
-    expect(vm.$ga.event).toHaveBeenCalled();
+      // Then
+      expect(vm.$ga.event).toHaveBeenCalled();
+    });
+
+    it("should clear the message", async () => {
+      // Given
+      wrapper.find("textarea").setValue("valid message");
+
+      // When
+      wrapper.find("form").trigger("submit");
+      await wrapper.vm.$nextTick;
+
+      // Then
+      expect(wrapper.find("textarea").element.value).toBeFalsy();
+    });
+
+    it("should display a success message", async () => {
+      // When
+      wrapper.find("textarea").setValue("valid message");
+      wrapper.find("form").trigger("submit");
+      await wrapper.vm.$nextTick;
+
+      // Then
+      expect(wrapper.find(".success-message").text()).toBe("contact.success");
+    });
+
+    it("should remove the error message if needed", async () => {
+      // Given
+      wrapper.find("form").trigger("submit");
+      await wrapper.vm.$nextTick;
+      expect(wrapper.find(".error-message").text()).toBeTruthy();
+
+      // When
+      wrapper.find("textarea").setValue("valid message");
+      wrapper.find("form").trigger("submit");
+      await wrapper.vm.$nextTick;
+
+      // Then
+      expect(wrapper.find(".error-message").text()).toBeFalsy();
+    });
   });
 
-  it("should not send any event and should display an error message if submitting an empty message", async () => {
-    // When
-    wrapper.find("form").trigger("submit");
-    await wrapper.vm.$nextTick;
+  describe("when submitting an empty message", () => {
+    it("should not send any event and should display an error message", async () => {
+      // When
+      wrapper.find("form").trigger("submit");
+      await wrapper.vm.$nextTick;
 
-    // Then
-    expect(vm.$ga.event).not.toHaveBeenCalled();
-    expect(wrapper.find(".error-message").text()).toBe("contact.error-empty");
-  });
+      // Then
+      expect(vm.$ga.event).not.toHaveBeenCalled();
+      expect(wrapper.find(".error-message").text()).toBe("contact.error-empty");
+    });
 
-  it("should remove the error message if a valid message is sent", async () => {
-    // Given
-    wrapper.find("form").trigger("submit");
-    await wrapper.vm.$nextTick;
-    expect(wrapper.find(".error-message").text()).not.toBe("");
+    it("should remove the success message if needed", async () => {
+      // Given
+      wrapper.find("textarea").setValue("valid message");
 
-    // When
-    wrapper.find("textarea").setValue("valid message");
-    wrapper.find("form").trigger("submit");
-    await wrapper.vm.$nextTick;
+      wrapper.find("form").trigger("submit");
+      await wrapper.vm.$nextTick;
+      expect(wrapper.find(".success-message").text()).toBeTruthy();
 
-    // Then
-    expect(wrapper.find(".error-message").text()).toBe("");
+      // When
+      wrapper.find("form").trigger("submit");
+      await wrapper.vm.$nextTick;
+
+      // Then
+      expect(wrapper.find(".success-message").text()).toBeFalsy();
+    });
   });
 });
