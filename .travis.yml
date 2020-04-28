@@ -1,21 +1,41 @@
 language: node_js
 node_js:
-  - lts/*
-
-dist: trusty
+  - 11
 
 addons:
   sonarcloud:
     organization: "jsulpis-github"
     token: $SONAR_TOKEN
 
-cache: yarn
+cache:
+  yarn: true
+  # cache Cypress binary
+  directories:
+    - ~/.cache
 
-script:
-  - yarn lint
-  - yarn test:coverage
-  - sonar-scanner
-  - yarn generate
+jobs:
+  include:
+    - stage: "Build"
+      name: "Lint, Unit tests and Sonar analysis"
+      script:
+        - yarn lint
+        - yarn test:coverage
+        - sonar-scanner
+
+    - name: "Export and e2e tests"
+      script:
+        # static files generation
+        - yarn generate
+        # check that Cypress can run
+        - yarn cy:verify
+        # start server in the background
+        - yarn serve:static &
+        # run all Cypress tests and record on the dashboard
+        - yarn cy:run -- --record
+        # after all tests finish running we need
+        # to kill all background jobs (like "npm start &")
+        # this avoids flake in Travis jobs
+        - kill $(jobs -p) || true
 
 branches:
   only:

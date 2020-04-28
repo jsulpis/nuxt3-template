@@ -2,14 +2,9 @@
   <button :class="[data.class, data.staticClass]" v-on="listeners"><slot /></button>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 button {
-  @apply px-4 py-1 text-sm font-bold bg-gray-300 text-gray-600;
-
-  &.active,
-  &:hover {
-    @apply bg-gray-400 text-gray-800;
-  }
+  @apply px-4 py-1 text-sm bg-surface font-bold;
 
   &:focus {
     @apply outline-none;
@@ -21,6 +16,27 @@ button {
 
   &:last-child {
     @apply rounded-r-full;
+  }
+}
+
+.dark-mode {
+  button.active,
+  button:hover {
+    @apply bg-gray-500;
+  }
+}
+
+.light-mode {
+  button.active,
+  button:hover {
+    @apply bg-gray-300;
+  }
+}
+
+.rainbow-mode {
+  button.active,
+  button:hover {
+    @apply bg-yellow-300;
   }
 }
 </style>

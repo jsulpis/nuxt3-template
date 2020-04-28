@@ -10,5 +10,5 @@ module.exports = {
     "^.+\\.js$": "babel-jest",
     ".*\\.(vue)$": "vue-jest"
   },
-  testPathIgnorePatterns: ["<rootDir>/e2e"]
+  testPathIgnorePatterns: ["<rootDir>/cypress"]
 };

@@ -39,6 +39,7 @@
     "message": "Message",
     "placeholder": "Entrez un message",
     "send": "Envoyer",
-    "error-empty": "Vous ne pouvez pas envoyer un message vide !"
+    "error-empty": "Vous ne pouvez pas envoyer un message vide !",
+    "success": "L'événement a bien été émis."
   }
 }

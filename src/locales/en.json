@@ -39,6 +39,7 @@
     "message": "Message",
     "placeholder": "Type a message",
     "send": "Send",
-    "error-empty": "You can't send an empty message !"
+    "error-empty": "You can't send an empty message !",
+    "success": "Event successfully triggered."
   }
 }

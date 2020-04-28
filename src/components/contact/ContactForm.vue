@@ -20,6 +20,9 @@
     <p class="mt-2 font-semibold text-red-500 opacity-100 error-message">
       {{ $t(errorMessage) }}
     </p>
+    <p class="mt-2 font-semibold text-green-500 opacity-100 success-message">
+      {{ $t(successMessage) }}
+    </p>
   </form>
 </template>
 
@@ -28,20 +31,23 @@ export default {
   data() {
     return {
       message: "",
-      errorMessage: ""
+      errorMessage: "",
+      successMessage: ""
     };
   },
   methods: {
     handleSubmit() {
       if (!!this.message) {
-        this.errorMessage = "";
         this.$ga.event({
           eventCategory: "Contact",
           eventAction: "submit_form",
           eventLabel: "Form submission"
         });
+        this.errorMessage = "";
+        this.successMessage = "contact.success";
       } else {
         this.errorMessage = "contact.error-empty";
+        this.successMessage = "";
       }
 
       this.message = "";
