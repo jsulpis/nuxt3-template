@@ -6,7 +6,7 @@
         <div class="inline-flex flex-col w-10/12 lg:w-3/4">
           <p class="opacity-100">Clone the repository and install the dependencies:</p>
           <CodeBlock class="mt-1"
-            >git clone https://github.com/jsulpis/nuxtjs-template.git && cd nuxtjs-template && npm i</CodeBlock
+            >git clone https://github.com/jsulpis/nuxtjs-template.git && cd nuxtjs-template && yarn</CodeBlock
           >
         </div>
       </li>
@@ -18,7 +18,7 @@
     <ul>
       <li>
         You may want to change the theme in
-        <span class="filename">tailwind.config.js</span>to use your own color palette.
+        <span class="filename">tailwind.config.js</span> to use your own color palette.
       </li>
       <li>
         See the
@@ -37,6 +37,19 @@
         This
         <a href="https://www.viget.com/articles/a-better-approach-for-using-purgecss-with-tailwind/">article</a>
         provides some solutions to common issues when working with Purge CSS.
+      </li>
+    </ul>
+
+    <h4>Cypress</h4>
+    <ul>
+      <li>The project has scripts to run the Cypress tests locally and on the CI.</li>
+      <li>
+        You can use the free plan of the
+        <a href="https://docs.cypress.io/guides/dashboard/introduction.html">Cypress Dashboard</a>
+        to have commit status checks on your pull requests. To do this, you need to login to the Cypress Dashboard,
+        initialize the project, get the record key and put it as the environment variable CYPRESS_RECORD_KEY in Travis.
+        More information on the
+        <a href="https://docs.cypress.io/guides/dashboard/projects.html">documentation</a>.
       </li>
     </ul>
 
@@ -91,8 +104,8 @@
     </p>
     <ul>
       <li>
-        NODE_VERSION: <span class="font-bold">12</span>
-        <small>(some packages do not support the default node version on Netlify)</small>
+        NODE_VERSION: <span class="font-bold">12</span> (some packages do not support the default node version on
+        Netlify)
       </li>
       <li>GA_TRACKING_ID: <span class="font-bold">{yourGoogleAnalyticsTrackingID}</span></li>
       <li>
@@ -106,7 +119,6 @@
     </ul>
 
     <h4>Build settings</h4>
-    <p>Here are the other settings you can use in the build settings:</p>
     <ul>
       <li>Build command: <span class="font-bold">yarn generate</span></li>
       <li>Publish directory: <span class="font-bold">dist</span></li>
