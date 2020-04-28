@@ -15,13 +15,14 @@ cache:
 
 jobs:
   include:
-    - stage: "Lint, Unit tests and Sonar analysis"
+    - stage: "Build"
+      name: "Lint, Unit tests and Sonar analysis"
       script:
         - yarn lint
         - yarn test:coverage
         - sonar-scanner
 
-    - stage: "Export and e2e tests"
+    - name: "Export and e2e tests"
       script:
         # static files generation
         - yarn generate
