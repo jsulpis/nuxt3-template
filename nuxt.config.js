@@ -47,11 +47,18 @@ module.exports = {
     ],
     ["@nuxtjs/google-analytics", { id: process.env.GA_TRACKING_ID }],
     // Doc: https://github.com/nuxt-community/color-mode-module
-    ["@nuxtjs/color-mode", { preference: "light" }]
+    ["@nuxtjs/color-mode", { preference: "light" }],
+    "@nuxtjs/pwa"
   ],
   purgeCSS: {
     whitelist: ["__nuxt", "__layout", "dark-mode"],
     whitelistPatterns: [/page-(enter|leave)/, /svg.*/, /fa.*/] // Keep Fontawesome classes
+  },
+  pwa: {
+    manifest: {
+      name: "Nuxt.js Template",
+      short_name: "Nuxt.js Template"
+    }
   },
   /*
    ** Nuxt.js modules

@@ -22,7 +22,7 @@ button {
 .dark-mode {
   button.active,
   button:hover {
-    @apply bg-gray-500;
+    @apply bg-gray-700;
   }
 }
 
