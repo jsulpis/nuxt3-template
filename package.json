@@ -19,7 +19,6 @@
     "cy:run": "cypress run"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
     "nuxt": "^2.12.2",
     "nuxt-i18n": "^6.9.1",
     "serve": "^11.3.0"
@@ -32,6 +31,7 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/google-analytics": "^2.2.3",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@nuxtjs/tailwindcss": "^1.4.0",
     "@types/jest": "^25.2.1",
     "@vue/test-utils": "^1.0.0-beta.33",
