@@ -15,6 +15,7 @@ const icons = [
   { name: "Tailwind CSS", file: "tailwindcss-icon.svg" },
   { name: "PurgeCSS", file: "purgecss-icon.png" },
   { name: "Color themes", file: "color-mode-icon.png" },
+  { name: "PWA", file: "pwa-icon.png" },
   { name: "Sass", file: "sass-icon.svg" },
   { name: "Font Awesome", file: "font-awesome-icon.svg" },
   { name: "i18n", file: "i18n-icon.png" },
