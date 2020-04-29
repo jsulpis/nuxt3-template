@@ -1,23 +1,21 @@
-<h1 align="center">Nuxt.js Template</h1>
-<h3 align="center">Full-featured template for JAMstack websites using nuxt.js</h3>
-<p align="center">
-	<a href="https://travis-ci.org/jsulpis/nuxtjs-template">
-		<img alt="Build Status" src="https://travis-ci.org/jsulpis/nuxtjs-template.svg?branch=master" />
-	</a>
-  <a href="https://sonarcloud.io/dashboard?id=nuxt-template">
-		<img alt="Quality Gate Status" src="https://sonarcloud.io/api/project_badges/measure?project=nuxt-template&metric=alert_status" />
-	</a>
-  <a href="https://sonarcloud.io/dashboard?id=nuxt-template">
-		<img alt="Coverage" src="https://sonarcloud.io/api/project_badges/measure?project=nuxt-template&metric=coverage" />
-	</a>
-  <a href="http://makeapullrequest.com">
-		<img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" />
-	</a>
+<span align="center">
+  
+<h1>Nuxt.js Template</h1>
+<h3>Full-featured template for JAMstack websites using nuxt.js</h3>
+
+<p>
+  
+[![Build Status](https://travis-ci.org/jsulpis/nuxtjs-template.svg?branch=master)](https://travis-ci.org/jsulpis/nuxtjs-template)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nuxt-template&metric=alert_status)](https://sonarcloud.io/dashboard?id=nuxt-template)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=nuxt-template&metric=coverage)](https://sonarcloud.io/dashboard?id=nuxt-template)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 </p>
 
-<a align="center" href="https://nuxtjs-template.netlify.app">
+<a href="https://nuxtjs-template.netlify.app">
   <img class="repo-preview" src="https://raw.githubusercontent.com/jsulpis/nuxtjs-template/master/preview.png" alt="Screenshot image"/>
 </a>
+
+</span>
 
 **Deploy your own copy of this project on Netlify in just a few clicks:**
 
@@ -116,6 +114,6 @@ See the [documentation](https://nuxtjs-template.netlify.app/documentation)
 
 ## License
 
-Although you don't *have* to, if you reuse this template for your projects I would appreciate it if you would credit me and provide a link to my GitHub profile in the footer. Thanks !
+Although you don't _have_ to, if you reuse this template for your projects I would appreciate it if you would credit me and provide a link to my GitHub profile in the footer. Thanks !
 
 Released under the [MIT](https://github.com/jsulpis/nuxtjs-template/blob/master/LICENSE) license.
