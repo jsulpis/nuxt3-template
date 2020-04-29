@@ -1,69 +1,78 @@
-<span align="center">
-  
-<h1>Nuxt template</h1>
-<h3>A comprehensive template for nuxt-based projects.</h3>
-
-<p>
-  
-[![Build Status](https://travis-ci.org/jsulpis/nuxt-template.svg?branch=master)](https://travis-ci.org/jsulpis/nuxt-template)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/86fbae01c9e747539b33b869142eff69)](https://www.codacy.com/app/jsulpis/nuxt-template?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jsulpis/nuxt-template&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/86fbae01c9e747539b33b869142eff69)](https://www.codacy.com/app/jsulpis/nuxt-template?utm_source=github.com&utm_medium=referral&utm_content=jsulpis/nuxt-template&utm_campaign=Badge_Coverage)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+<h1 align="center">Nuxt.js Template</h1>
+<h3 align="center">Full-featured template for JAMstack websites using nuxt.js</h3>
+<p align="center">
+	<a href="https://travis-ci.org/jsulpis/nuxtjs-template">
+		<img alt="Build Status" src="https://travis-ci.org/jsulpis/nuxtjs-template.svg?branch=master" />
+	</a>
+  <a href="https://sonarcloud.io/dashboard?id=nuxt-template">
+		<img alt="Quality Gate Status" src="https://sonarcloud.io/api/project_badges/measure?project=nuxt-template&metric=alert_status" />
+	</a>
+  <a href="https://sonarcloud.io/dashboard?id=nuxt-template">
+		<img alt="Coverage" src="https://sonarcloud.io/api/project_badges/measure?project=nuxt-template&metric=coverage" />
+	</a>
+  <a href="http://makeapullrequest.com">
+		<img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" />
+	</a>
 </p>
 
-<a href="https://jsulpis.github.io/nuxt-template/">
-  <img class="repo-preview" src="https://raw.githubusercontent.com/jsulpis/nuxt-template/master/preview.png" alt="ScreenShot image"/>
+<a align="center" href="https://nuxtjs-template.netlify.app">
+  <img class="repo-preview" src="https://raw.githubusercontent.com/jsulpis/nuxtjs-template/master/preview.png" alt="Screenshot image"/>
 </a>
 
-</span>
+**Deploy your own copy of this project on Netlify in just a few clicks:**
 
-## Introduction
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jsulpis/nuxtjs-template)
 
-After some research on the Internet, I found Nuxt templates with a lot of good features: templates for using Nuxt with TypeScript, templates with internationalisation, templates with good testing setups... but none of them had ALL those features together. So I made this template which gathers all I wanted to have in a Nuxt application. I hope it will suit your needs as well.
+## About
+
+I built this template with all the tools I found useful to develop my own personal projects, so it can be a bit biased. If you find something that you think is not relevant or could be improved, please open an issue or a pull request to fix it.
 
 ## Features
 
-This template started from an application generated with the 'create-nuxt-app' command. Then I added some features.
+**Vue.js + TypeScript**
 
-**TypeScript**
-
-- Supported in vue files. You can also write your business logic in separate TypeScript files and import it in your components.
+- Because I love strongly typed languages (I'm a bit of a java developer at heart)
 
 **Linting**
 
-- ESlint
-- Prettier
+- Don't bother with linting ever again. Let Prettier handle it for you. Pre-commit hook included to lint your staged files.
 
 **Testing Setup**
 
-- Unit tests with Jest
-- E2E tests with Nightwatch
+- Unit tests with Jest and Vue Test Utils
+- E2e tests with Cypress (runs in the CI)
 
-**Internationalisation**
+**UI**
 
-- with nuxt-i18n to translate your app in multiple languages
+- Multiple color themes
+- Leverage the power of Tailwind CSS to build beautiful interfaces. You will find a Tailwind config file that you can customize to build your own theme.
+- You can also use conventional scss style in the components.
+- FontAwesome icons ready to use.
+
+**SEO**
+
+- Populate each page header metadata with name, description, image, etc.
+
+**Accessibility**
+
+- i18n preconfigured with two locales (English and French)
+
+**PWA**
+
+- Users can install the application on their device and run it offline
 
 **Deployment**
 
-- Example of CI/CD on GitHub Pages with Travis-CI
-- Plugin for Google Analytics
+- Example of CI with Travis-CI
+- Ready to deploy on Netlify using git integration
+- Google global site tag (gtag.js) for sending data to Google Analytics
 
 ## Installation
 
-### Install
+Clone the repository and install the dependencies:
 
-Download the zip or clone this project.
-
-```
-git clone https://github.com/jsulpis/nuxt-template.git
-cd nuxt-template
-```
-
-then install all the dependencies.
-
-```
-npm install
+```shell
+git clone https://github.com/jsulpis/nuxtjs-template.git && cd nuxtjs-template && yarn
 ```
 
 ## Usage
@@ -73,35 +82,40 @@ npm install
 Serve with hot reload at localhost:3000.
 
 ```
-npm run dev
+yarn dev
 ```
 
-### Deployment
+### Build
 
-Build for production and launch server. Your application is then served with server-side rendering (SSR).
-
-```
-npm run build
-npm start
-```
-
-Or generate a static project with pre-rendered pages to put directly on your server (or GitHub Pages). This is better for SEO.
+If you want a JAMstack website: generate a fully static project with pre-rendered pages to put directly on a server or any hosting platform.
 
 ```
-npm run generate
+yarn generate
 ```
 
-## Contributing
+If you want to serve your website with SSR:
 
-Contributions are welcome ! If you improve this template, feel free to share it.
+```
+yarn build
+yarn start
+```
 
-1. Fork the project (<https://github.com/jsulpis/nuxt-template/fork>)
-2. Clone it on your machine (`git clone https://github.com/yourName/nuxt-template.git`)
-3. Create your feature branch (`git checkout -b feature/awesomeFeature`)
-4. Commit your changes (`git commit -am 'Add my awesome feature'`)
-5. Push your branch (`git push origin feature/awesomeFeature`)
-6. Open a new Pull Request
+## Deployment
+
+This template is ready to be deployed on Netlify:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jsulpis/nuxtjs-template)
+
+See the `Deployment` section of the [documentation](https://nuxtjs-template.netlify.app/documentation) for more information.
+
+You can integrate Netlify with your GitHub account, which will allow it to deploy each branch and pull request to their own environment, and the master branch in production.
+
+## Configuration
+
+See the [documentation](https://nuxtjs-template.netlify.app/documentation)
 
 ## License
 
-Released under the [MIT](https://github.com/jsulpis/nuxt-template/blob/master/LICENSE) license.
+Although you don't *have* to, if you reuse this template for your projects I would appreciate it if you would credit me and provide a link to my GitHub profile in the footer. Thanks !
+
+Released under the [MIT](https://github.com/jsulpis/nuxtjs-template/blob/master/LICENSE) license.
