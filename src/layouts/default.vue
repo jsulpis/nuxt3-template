@@ -29,8 +29,9 @@ export default Vue.extend({
       // @ts-ignore
       .description(this.$t(routeName + ".description"))
       .url(process.env.appUrl + this.$route.path)
+      .imageUrl(process.env.appUrl + "/og-image.png")
       .type("website")
-      .twitterCard("summary")
+      .twitterCard("summary_large_image")
       .build();
 
     return {

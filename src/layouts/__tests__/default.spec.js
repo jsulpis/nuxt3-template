@@ -7,6 +7,13 @@ describe("Default Layout", () => {
   const APP_URL = "http://localhost:3000";
   let wrapper;
 
+  const ogImageMetaTags = [
+    { hid: "og:image", property: "og:image", content: APP_URL + "/og-image.png" },
+    { hid: "twitter:image", property: "twitter:image", content: APP_URL + "/og-image.png" },
+    { hid: "og:type", property: "og:type", content: "website" },
+    { hid: "twitter:card", name: "twitter:card", content: "summary_large_image" }
+  ];
+
   beforeEach(() => {
     jest.resetModules(); // this is important - it clears the cache
     process.env = { ...OLD_ENV };
@@ -46,8 +53,7 @@ describe("Default Layout", () => {
           content: "contact.description"
         },
         { hid: "og:url", property: "og:url", content: APP_URL + "/contact" },
-        { hid: "og:type", property: "og:type", content: "website" },
-        { hid: "twitter:card", name: "twitter:card", content: "summary" }
+        ...ogImageMetaTags
       ]
     });
   });
@@ -70,8 +76,7 @@ describe("Default Layout", () => {
           content: "index.description"
         },
         { hid: "og:url", property: "og:url", content: APP_URL + "/toto" },
-        { hid: "og:type", property: "og:type", content: "website" },
-        { hid: "twitter:card", name: "twitter:card", content: "summary" }
+        ...ogImageMetaTags
       ]
     });
   });
