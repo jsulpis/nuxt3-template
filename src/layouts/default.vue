@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col">
     <app-header />
-    <main class="flex items-center justify-center flex-grow transition-colors duration-150 bg-default">
-      <nuxt class="container h-full py-16 mx-auto" />
+    <main class="flex-grow transition-colors duration-150 bg-default">
+      <nuxt class="container py-16 mx-auto" />
     </main>
     <app-footer />
   </div>
@@ -29,8 +29,9 @@ export default Vue.extend({
       // @ts-ignore
       .description(this.$t(routeName + ".description"))
       .url(process.env.appUrl + this.$route.path)
+      .imageUrl(process.env.appUrl + "/og-image.png")
       .type("website")
-      .twitterCard("summary")
+      .twitterCard("summary_large_image")
       .build();
 
     return {

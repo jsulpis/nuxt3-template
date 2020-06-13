@@ -20,7 +20,7 @@ module.exports = {
    */
   env: {
     appTitle: APP_TITLE,
-    appUrl: process.env.URL
+    appUrl: process.env.URL // main address of the website. Prodived by Netlify
   },
   /*
    ** Customize the progress bar color
