@@ -85,8 +85,8 @@
         <a href="https://analytics.google.com/analytics/web">Google Analytics dashboard</a> and note its Tracking ID.
       </li>
       <li>
-        Create an environment variable called GA_TRACKING_ID with your new id. See the instructions below to setup
-        variables with Zeit Now.
+        Create an environment variable called GA_TRACKING_ID with your new id. See the instructions below to do it on
+        Netlify.
       </li>
     </ul>
 
@@ -94,7 +94,7 @@
     <p>
       The template is ready to be deployed on <a href="https://www.netlify.com/">Netlify</a> so the following
       instructions target this platform. Of course you can easily deploy it with any other hosting platform like
-      <a href="https://zeit.co/docs">Zeit Now</a>.
+      <a href="https://vercel.com/docs">Vercel</a>.
     </p>
 
     <h4>Environment variables</h4>
