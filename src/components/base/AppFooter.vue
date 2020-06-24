@@ -25,7 +25,7 @@
                 </footer-link>
               </li>
               <li>
-                <footer-link href="https://nextjs-template.juliensulpis.now.sh">
+                <footer-link href="https://nextjs-template.juliensulpis.vercel.app">
                   {{ $t("footer.next-js") }}
                 </footer-link>
               </li>
