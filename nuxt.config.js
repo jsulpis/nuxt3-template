@@ -6,6 +6,8 @@ module.exports = {
   server: {
     host: "0.0.0.0" // Allow to connect other devices on the local network
   },
+  target: "static",
+  components: true,
   /*
    ** Headers of the page
    */

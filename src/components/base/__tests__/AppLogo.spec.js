@@ -5,7 +5,7 @@ describe("AppLogo.vue", () => {
   const wrapper = mount(AppLogo);
 
   it("renders correct container", () => {
-    expect(wrapper.contains("svg")).toBe(true);
+    expect(wrapper.find("svg").exists()).toBe(true);
     expect(wrapper.classes()).toContain("NuxtLogo");
   });
 });

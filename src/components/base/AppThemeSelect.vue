@@ -1,6 +1,6 @@
 <template>
   <div class="inline-flex">
-    <app-button-select
+    <AppButtonSelect
       v-for="theme in themes"
       :key="theme.value"
       @click="$colorMode.preference = theme.value"
@@ -9,7 +9,7 @@
     >
       <FontAwesomeIcon :icon="theme.icon" size="sm" class="mr-1" />
       {{ $t("theme." + theme.value) }}
-    </app-button-select>
+    </AppButtonSelect>
   </div>
 </template>
 

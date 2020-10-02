@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col">
-    <app-header />
+    <AppHeader />
     <main class="flex-grow transition-colors duration-150 bg-default">
       <nuxt class="container py-16 mx-auto" />
     </main>
-    <app-footer />
+    <AppFooter />
   </div>
 </template>
 
