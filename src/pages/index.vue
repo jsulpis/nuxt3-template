@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center justify-center mt-16 sm:pt-24 lg:pb-4 sm:my-auto">
-    <app-logo class="w-3/4 h-24 md:h-40 md:w-1/2" />
+    <AppLogo class="w-3/4 h-24 md:h-40 md:w-1/2" />
     <h2 class="mt-4 text-xl font-semibold sm:text-3xl">
       {{ $t("index.description") }}
     </h2>
@@ -18,14 +18,7 @@
 </template>
 
 <script>
-import AppLogo from "@/components/base/AppLogo.vue";
-import IconList from "@/components/index/IconList.vue";
-
 export default {
-  name: "Home",
-  components: {
-    AppLogo,
-    IconList
-  }
+  name: "Home"
 };
 </script>

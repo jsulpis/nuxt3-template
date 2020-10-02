@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 11
+  - lts/*
 
 addons:
   sonarcloud:
@@ -29,7 +29,7 @@ jobs:
         # check that Cypress can run
         - yarn cy:verify
         # start server in the background
-        - yarn serve:static &
+        - yarn start &
         # run all Cypress tests and record on the dashboard
         - yarn cy:run -- --record
         # after all tests finish running we need

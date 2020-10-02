@@ -33,7 +33,7 @@ describe("Documentation Page", () => {
     });
 
     it("should have a link to the english documentation", () => {
-      cy.url().should("eq", Cypress.config().baseUrl + "/fr/documentation");
+      cy.url().should("eq", Cypress.config().baseUrl + "/fr/documentation/");
 
       cy.get("main a").click();
       cy.url().should("eq", Cypress.config().baseUrl + "/documentation");

@@ -16,7 +16,7 @@ module.exports = {
         primary: colors.green
       },
       opacity: {
-        "90": ".9"
+        90: ".9"
       },
       textColor: {
         default: "var(--color-text-default)",

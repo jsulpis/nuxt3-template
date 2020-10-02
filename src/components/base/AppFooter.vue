@@ -3,14 +3,14 @@
     <div class="container mx-auto">
       <div class="flex flex-wrap items-end">
         <div class="w-full text-base lg:w-6/12">
-          <app-lang-select />
-          <app-theme-select class="my-2" />
+          <AppLangSelect />
+          <AppThemeSelect class="my-2" />
           <p>
             {{ $t("footer.theme") }}:
-            <footer-link href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation">
+            <AppFooterLink href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation">
               Tailwind Starter Kit
-            </footer-link>
-            {{ $t("footer.by") }} <footer-link href="https://www.creative-tim.com">Creative Tim</footer-link>.
+            </AppFooterLink>
+            {{ $t("footer.by") }} <AppFooterLink href="https://www.creative-tim.com">Creative Tim</AppFooterLink>.
           </p>
         </div>
         <div class="flex flex-wrap w-full px-4 lg:w-6/12 lg:text-left">
@@ -20,14 +20,14 @@
             </span>
             <ul class="list-unstyled">
               <li>
-                <footer-link href="https://www.netlify.com/jamstack/">
+                <AppFooterLink href="https://www.netlify.com/jamstack/">
                   {{ $t("footer.jamstack") }}
-                </footer-link>
+                </AppFooterLink>
               </li>
               <li>
-                <footer-link href="https://nextjs-template.juliensulpis.vercel.app">
+                <AppFooterLink href="https://nextjs-template.juliensulpis.vercel.app">
                   {{ $t("footer.next-js") }}
-                </footer-link>
+                </AppFooterLink>
               </li>
             </ul>
           </div>
@@ -37,14 +37,14 @@
             </span>
             <ul class="list-unstyled">
               <li>
-                <footer-link href="https://github.com/jsulpis/nuxtjs-template">
+                <AppFooterLink href="https://github.com/jsulpis/nuxtjs-template">
                   {{ $t("footer.star-on-github") }}
-                </footer-link>
+                </AppFooterLink>
               </li>
               <li>
-                <footer-link href="https://github.com/jsulpis/nuxtjs-template/blob/master/LICENSE">
+                <AppFooterLink href="https://github.com/jsulpis/nuxtjs-template/blob/master/LICENSE">
                   {{ $t("footer.license") }}
-                </footer-link>
+                </AppFooterLink>
               </li>
             </ul>
           </div>
@@ -54,7 +54,7 @@
       <div class="w-full mx-auto">
         <p class="py-1 text-sm">
           © {{ new Date().getFullYear() }} {{ $t("footer.made-with") }} <FontAwesomeIcon icon="heart" size="xs" />
-          {{ $t("footer.by") }} <footer-link href="https://github.com/jsulpis">Julien Sulpis</footer-link>.
+          {{ $t("footer.by") }} <AppFooterLink href="https://github.com/jsulpis">Julien Sulpis</AppFooterLink>.
         </p>
       </div>
     </div>
@@ -64,19 +64,11 @@
 <script>
 import AppThemeSelect from "@/components/base/AppThemeSelect.vue";
 import AppLangSelect from "@/components/base/AppLangSelect.vue";
-
-const FooterLink = {
-  functional: true,
-  render: (h, { data, children }) => (
-    <a href={data.attrs.href} class="font-semibold hover:opacity-75">
-      {children}
-    </a>
-  )
-};
+import AppFooterLink from "@/components/base/AppFooterLink.vue";
 
 export default {
   components: {
-    FooterLink,
+    AppFooterLink,
     AppThemeSelect,
     AppLangSelect
   }

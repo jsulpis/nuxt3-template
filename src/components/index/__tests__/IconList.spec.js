@@ -6,6 +6,6 @@ describe("IconList", () => {
   it("should contain a set of icons", () => {
     const wrapper = mount(IconList);
 
-    expect(wrapper.findAll(IconItem).length).toBeGreaterThan(1);
+    expect(wrapper.findAllComponents(IconItem).length).toBeGreaterThan(1);
   });
 });
