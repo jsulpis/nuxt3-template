@@ -37,6 +37,7 @@ describe("Default Layout", () => {
     const nuxtI18nSeoTag = { property: "prop", content: "content" };
     wrapper.vm.$options.$nuxtI18nSeo = () => ({ meta: [nuxtI18nSeoTag] });
     wrapper.vm.$options.$t = c => c;
+    wrapper.vm.$options.$route = { name: "index__fr", path: "/" };
 
     expect(wrapper.vm.$options.head()).toEqual({
       title: "index.title",
