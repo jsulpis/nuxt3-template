@@ -47,7 +47,6 @@ module.exports = {
         cssPath: "@/assets/scss/tailwind.scss"
       }
     ],
-    ["@nuxtjs/google-analytics", { id: process.env.GA_TRACKING_ID }],
     // Doc: https://github.com/nuxt-community/color-mode-module
     ["@nuxtjs/color-mode", { preference: "light" }],
     "@nuxtjs/pwa"

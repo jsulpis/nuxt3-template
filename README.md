@@ -63,7 +63,6 @@ I built this template with all the tools I found useful to develop my own person
 
 - Example of CI with Travis-CI
 - Ready to deploy on Netlify using git integration
-- Google global site tag (gtag.js) for sending data to Google Analytics
 
 ## Installation
 

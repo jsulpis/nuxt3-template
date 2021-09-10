@@ -21,8 +21,7 @@ const icons = [
   { name: "i18n", file: "i18n-icon.png" },
   { name: "Cypress", file: "cypress-icon.svg" },
   { name: "SonarCloud", file: "sonarcloud-icon.png" },
-  { name: "Travis CI", file: "travis-ci-icon.svg" },
-  { name: "Google Analytics", file: "google-analytics-icon.svg" }
+  { name: "Travis CI", file: "travis-ci-icon.svg" }
 ];
 
 export default {

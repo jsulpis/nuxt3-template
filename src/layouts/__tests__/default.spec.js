@@ -37,22 +37,21 @@ describe("Default Layout", () => {
     const nuxtI18nSeoTag = { property: "prop", content: "content" };
     wrapper.vm.$options.$nuxtI18nSeo = () => ({ meta: [nuxtI18nSeoTag] });
     wrapper.vm.$options.$t = c => c;
-    wrapper.vm.$options.$route = { name: "contact__fr", path: "/contact" };
 
     expect(wrapper.vm.$options.head()).toEqual({
-      title: "contact.title",
+      title: "index.title",
       htmlAttrs: {},
       link: [],
       meta: [
         nuxtI18nSeoTag,
-        { hid: "og:title", property: "og:title", content: "contact.title" },
-        { hid: "description", name: "description", content: "contact.description" },
+        { hid: "og:title", property: "og:title", content: "index.title" },
+        { hid: "description", name: "description", content: "index.description" },
         {
           hid: "og:description",
           property: "og:description",
-          content: "contact.description"
+          content: "index.description"
         },
-        { hid: "og:url", property: "og:url", content: APP_URL + "/contact" },
+        { hid: "og:url", property: "og:url", content: APP_URL + "/" },
         ...ogImageMetaTags
       ]
     });

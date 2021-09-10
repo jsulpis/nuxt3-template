@@ -36,8 +36,7 @@ export default {
       isExpanded: false,
       routes: [
         { href: "/", label: "header.home" },
-        { href: "/documentation", label: "header.documentation" },
-        { href: "/contact", label: "header.contact" }
+        { href: "/documentation", label: "header.documentation" }
       ]
     };
   }
