@@ -14,10 +14,6 @@ describe("Header", () => {
       cy.get("nav ul li:nth-of-type(2)").click();
       cy.url().should("eq", Cypress.config().baseUrl + "/documentation");
 
-      // third link: contact
-      cy.get("nav ul li:nth-of-type(3)").click();
-      cy.url().should("eq", Cypress.config().baseUrl + "/contact");
-
       // app name links to the home page
       cy.get("header a").first().click();
       cy.url().should("eq", Cypress.config().baseUrl + "/");
@@ -40,11 +36,6 @@ describe("Header", () => {
       cy.get("header button").click();
       cy.get("nav ul li:nth-of-type(2)").click();
       cy.url().should("eq", Cypress.config().baseUrl + "/documentation");
-
-      // third link: contact
-      cy.get("header button").click();
-      cy.get("nav ul li:nth-of-type(3)").click();
-      cy.url().should("eq", Cypress.config().baseUrl + "/contact");
 
       // app name links to the home page
       cy.get("header button").click();

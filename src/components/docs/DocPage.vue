@@ -78,18 +78,6 @@
       <li>You should now have your pull requests analyzed and get checks from Travis CI and SonarCloud.</li>
     </ul>
 
-    <h4>Google Analytics</h4>
-    <ul>
-      <li>
-        Register your website in your
-        <a href="https://analytics.google.com/analytics/web">Google Analytics dashboard</a> and note its Tracking ID.
-      </li>
-      <li>
-        Create an environment variable called GA_TRACKING_ID with your new id. See the instructions below to do it on
-        Netlify.
-      </li>
-    </ul>
-
     <h3>Deployment</h3>
     <p>
       The template is ready to be deployed on <a href="https://www.netlify.com/">Netlify</a> so the following
@@ -107,7 +95,6 @@
         NODE_VERSION: <span class="font-bold">12</span> (some packages do not support the default node version on
         Netlify)
       </li>
-      <li>GA_TRACKING_ID: <span class="font-bold">{yourGoogleAnalyticsTrackingID}</span></li>
       <li>
         the 'URL' variable, which is the main url of the site, is used in the social networks meta tags. You can add it
         to your local <span class="filename">.env</span> file, but note that this is a

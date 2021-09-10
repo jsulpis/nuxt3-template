@@ -1,8 +1,7 @@
 {
   "header": {
     "home": "Accueil",
-    "documentation": "Documentation",
-    "contact": "Contact"
+    "documentation": "Documentation"
   },
   "footer": {
     "theme": "Thème",
@@ -31,15 +30,5 @@
   "documentation": {
     "title": "Documentation",
     "description": "Page de documentation du template."
-  },
-  "contact": {
-    "title": "Contact",
-    "description": "Page de contact.",
-    "info": "Ce n'est pas un vrai formulaire de contact. Il envoie simplement un énénement Google Analytics pour montrer la démarche.",
-    "message": "Message",
-    "placeholder": "Entrez un message",
-    "send": "Envoyer",
-    "error-empty": "Vous ne pouvez pas envoyer un message vide !",
-    "success": "L'événement a bien été émis."
   }
 }
