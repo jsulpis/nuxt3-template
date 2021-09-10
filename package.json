@@ -37,7 +37,7 @@
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "cross-env": "^7.0.2",
-    "cypress": "^4.12.1",
+    "cypress": "^8.3.1",
     "husky": "^4.3.0",
     "jest": "^25.5.4",
     "node-sass": "^4.14.1",
