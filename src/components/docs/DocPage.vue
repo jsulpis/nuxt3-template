@@ -53,16 +53,6 @@
       </li>
     </ul>
 
-    <h4>SonarCloud</h4>
-    <ul>
-      <li>Create a new project on SonarCloud and note the generated token.</li>
-      <li>
-        Update the project description in
-        <span class="filename">sonar-project.properties</span>.
-      </li>
-      <li>See the Travis CI configuration below to trigger the analysis during the build.</li>
-    </ul>
-
     <h4>Travis CI</h4>
     <ul>
       <li>Activate your repository in your Travis CI settings to trigger the builds on git push.</li>

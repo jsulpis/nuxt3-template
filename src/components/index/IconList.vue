@@ -20,7 +20,6 @@ const icons = [
   { name: "Font Awesome", file: "font-awesome-icon.svg" },
   { name: "i18n", file: "i18n-icon.png" },
   { name: "Cypress", file: "cypress-icon.svg" },
-  { name: "SonarCloud", file: "sonarcloud-icon.png" },
   { name: "Travis CI", file: "travis-ci-icon.svg" }
 ];
 
