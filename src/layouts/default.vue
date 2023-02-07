@@ -1,7 +1,3 @@
 <template>
-  <div>
-    <main>
-      <nuxt />
-    </main>
-  </div>
+  <slot />
 </template>
