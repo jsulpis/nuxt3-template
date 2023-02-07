@@ -1,0 +1,44 @@
+*.d.ts
+*.snap
+*.md
+*.yaml
+*.yml
+*.css
+*.scss
+*.png
+*.jpg
+*.svg
+*.json
+.eslintrc-auto-import.json
+
+.DS_Store
+.husky
+.nuxt
+.output
+.vercel
+node_modules
+playwright-report
+coverage
+test-results
+dist
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
