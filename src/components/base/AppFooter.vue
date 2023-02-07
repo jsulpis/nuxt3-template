@@ -53,7 +53,7 @@
       <hr class="mt-3 mb-6 border-gray-400" />
       <div class="w-full mx-auto">
         <p class="py-1 text-sm">
-          © {{ new Date().getFullYear() }} {{ $t("footer.made-with") }} <FontAwesomeIcon icon="heart" size="xs" />
+          © 2020-present · {{ $t("footer.made-with") }} <FontAwesomeIcon icon="heart" size="xs" />
           {{ $t("footer.by") }} <AppFooterLink href="https://github.com/jsulpis">Julien Sulpis</AppFooterLink>.
         </p>
       </div>

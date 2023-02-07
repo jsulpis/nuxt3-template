@@ -1,22 +1,27 @@
 {
-  "name": "nuxt-template",
-  "version": "1.0.0",
-  "description": "Full-featured template for JAMstack websites using nuxt.js",
+  "name": "nuxtjs-template",
+  "private": "true",
+  "description": "Full-featured template for JAMstack websites using nuxt 2",
   "author": "Julien Sulpis",
   "scripts": {
-    "dev": "nuxt",
+    "analyze": "nuxt build --analyze",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:verify": "cypress verify",
+    "dev": "nuxt",
     "generate": "nuxt generate",
     "lint": "prettier --check .",
     "lint:fix": "prettier --write .",
+    "start": "nuxt start",
     "test": "jest",
-    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "analyze": "nuxt build --analyze",
-    "cy:verify": "cypress verify",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "test:watch": "jest --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "dependencies": {
     "nuxt": "^2.14.6",
@@ -40,16 +45,11 @@
     "cypress": "^8.3.1",
     "husky": "^4.3.0",
     "jest": "^25.5.4",
-    "node-sass": "^4.14.1",
     "prettier": "^2.1.2",
     "pretty-quick": "^2.0.2",
+    "sass": "^1.58.0",
     "sass-loader": "^8.0.2",
     "ts-jest": "^25.5.1",
     "vue-jest": "^4.0.0-rc.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   }
 }
