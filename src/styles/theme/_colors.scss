@@ -1,0 +1,22 @@
+:root {
+  --color-grey-10-hsl: 0 0% 98%;
+  // --color-grey-20-hsl: 210 30% 97%;
+  --color-grey-30-hsl: 0 0% 90%;
+  // --color-grey-40-hsl: 213 27% 84%;
+  --color-grey-50-hsl: 0 0% 70%;
+  // --color-grey-60-hsl: 215 16% 47%;
+  // --color-grey-70-hsl: 206 19% 35%;
+  // --color-grey-80-hsl: 209 35% 18%;
+  // --color-grey-90-hsl: 207 48% 13%;
+  --color-grey-100-hsl: 240 4% 5%;
+
+  --color-primary-50-hsl: 155 100% 43%;
+
+  @for $i from 1 through 10 {
+    --color-grey-#{$i}0: hsl(var(--color-grey-#{$i}0-hsl));
+  }
+
+  @for $j from 5 through 5 {
+    --color-primary-#{$j}0: hsl(var(--color-primary-#{$j}0-hsl));
+  }
+}

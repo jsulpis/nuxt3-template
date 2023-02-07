@@ -1,3 +1,3 @@
 export default {
-  hi: "Hi"
+  title: "Nuxt 3 template for public websites"
 };

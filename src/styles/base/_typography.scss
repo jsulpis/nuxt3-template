@@ -1,0 +1,60 @@
+@use "@fontsource/inter/scss/mixins" as Inter;
+
+@include Inter.fontFace(
+  $weight: 400,
+  $style: normal,
+  $display: swap,
+  $fontDir: "@fontsource/inter/files"
+);
+@include Inter.fontFace(
+  $weight: 700,
+  $style: normal,
+  $display: swap,
+  $fontDir: "@fontsource/inter/files"
+);
+@include Inter.fontFace(
+  $weight: 900,
+  $style: normal,
+  $display: swap,
+  $fontDir: "@fontsource/inter/files"
+);
+
+h1,
+.h1 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color: var(--font-color-strong);
+}
+
+h2,
+.h2 {
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 4rem;
+  color: var(--font-color-strong);
+  margin-bottom: 1.2rem;
+}
+
+h3,
+.h3 {
+  font-weight: 900;
+  font-size: 2.6rem;
+  color: var(--font-color-strong);
+}
+
+p,
+.p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: 0.015em;
+  color: var(--font-color-default);
+}
+
+@each $color in (strong, default, light) {
+  .text-#{$color} {
+    color: var(--font-color-#{$color});
+  }
+}
