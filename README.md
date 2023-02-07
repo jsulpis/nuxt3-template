@@ -6,8 +6,6 @@
 <p>
   
 [![Build Status](https://travis-ci.org/jsulpis/nuxtjs-template.svg?branch=master)](https://travis-ci.org/jsulpis/nuxtjs-template)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nuxt-template&metric=alert_status)](https://sonarcloud.io/dashboard?id=nuxt-template)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=nuxt-template&metric=coverage)](https://sonarcloud.io/dashboard?id=nuxt-template)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 </p>
 
