@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import Hero from "~/modules/home/Hero.vue";
+</script>
+
 <template>
-  <h1>{{ $t("hi") }}</h1>
+  <Hero />
 </template>
+
+<style lang="scss" scoped></style>

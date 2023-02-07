@@ -12,7 +12,8 @@ const baseUrl = isProd
 export default defineNuxtConfig({
   appConfig: isProd ? prodConfig : devConfig,
   srcDir: "src",
-  modules: ["@vueuse/nuxt", "@nuxtjs/i18n"],
+  css: ["@unocss/reset/tailwind.css", "@/styles/main.scss"],
+  modules: ["@vueuse/nuxt", "@nuxtjs/i18n", "nuxt-icon"],
   runtimeConfig: {
     public: {
       baseUrl
@@ -40,6 +41,15 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ["/", "/fr"]
+    }
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "src/styles/abstract" as *;'
+        }
+      }
     }
   }
 });

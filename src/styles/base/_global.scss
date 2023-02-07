@@ -1,0 +1,26 @@
+html {
+  color-scheme: dark;
+  scroll-padding: 30px; // give a little space around the focused element when scrolling with tabulation
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--font-color-default);
+  font-family: var(--font-family);
+}
+
+html,
+body,
+#__nuxt {
+  height: 100%;
+}
+
+svg {
+  display: inline-block;
+}
+
+button,
+a,
+[tabindex="0"] {
+  -webkit-tap-highlight-color: transparent;
+}
