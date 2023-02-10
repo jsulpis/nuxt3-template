@@ -1,13 +1,18 @@
+<script setup lang="ts">
+import Navbar from "~/modules/navigation/Navbar.vue";
+</script>
+
 <template>
-  <main>
-    <slot />
-  </main>
+	<Navbar />
+	<main>
+		<slot />
+	</main>
 </template>
 
 <style lang="scss" scoped>
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 </style>

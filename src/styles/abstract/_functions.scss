@@ -1,0 +1,7 @@
+/// Shorthand for the colors with CSS variables
+@function theme($color, $variant, $opacity: 1) {
+	@if $opacity == 1 {
+		@return var(--color-#{$color}-#{$variant});
+	}
+	@return hsl(var(--color-#{$color}-#{$variant}-hsl) / $opacity);
+}

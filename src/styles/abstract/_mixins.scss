@@ -1,78 +1,78 @@
 @mixin phone-only {
-  @media (max-width: 599px) {
-    @content;
-  }
+	@media (max-width: 599px) {
+		@content;
+	}
 }
 @mixin tablet-portrait-up {
-  @media (min-width: 600px) {
-    @content;
-  }
+	@media (min-width: 600px) {
+		@content;
+	}
 }
 @mixin tablet-portrait-down {
-  @media (max-width: 899px) {
-    @content;
-  }
+	@media (max-width: 899px) {
+		@content;
+	}
 }
 @mixin tablet-portrait-only {
-  @media (min-width: 600px) and (max-width: 899px) {
-    @content;
-  }
+	@media (min-width: 600px) and (max-width: 899px) {
+		@content;
+	}
 }
 @mixin tablet-landscape-up {
-  @media (min-width: 900px) {
-    @content;
-  }
+	@media (min-width: 900px) {
+		@content;
+	}
 }
 @mixin laptop-up {
-  @media (min-width: 1200px) {
-    @content;
-  }
+	@media (min-width: 1200px) {
+		@content;
+	}
 }
 @mixin big-laptop-up {
-  @media (min-width: 1400px) {
-    @content;
-  }
+	@media (min-width: 1400px) {
+		@content;
+	}
 }
 @mixin desktop-up {
-  @media (min-width: 1800px) {
-    @content;
-  }
+	@media (min-width: 1800px) {
+		@content;
+	}
 }
 @mixin big-desktop-up {
-  @media (min-width: 2200px) {
-    @content;
-  }
+	@media (min-width: 2200px) {
+		@content;
+	}
 }
 
 @mixin keyboard-focus {
-  &:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 2px var(--color-primary-50);
-  }
+	&:focus-visible {
+		outline: none;
+		box-shadow: 0 0 0 2px var(--color-primary-50);
+	}
 }
 
 @mixin hover-and-focus {
-  @media (hover: hover) {
-    &:hover,
-    &:focus-visible {
-      @content;
-    }
-  }
+	@media (hover: hover) {
+		&:hover,
+		&:focus-visible {
+			@content;
+		}
+	}
 }
 
 @mixin motion-no-preference {
-  @media (prefers-reduced-motion: no-preference) {
-    @content;
-  }
+	@media (prefers-reduced-motion: no-preference) {
+		@content;
+	}
 }
 
 @mixin visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 0;
-  width: 0;
-  padding: 0;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 0;
+	width: 0;
+	padding: 0;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
 }
