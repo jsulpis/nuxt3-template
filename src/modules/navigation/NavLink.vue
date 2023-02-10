@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { RouteLocationRaw } from "vue-router";
 
-defineProps<{ to: RouteLocationRaw; label: string }>();
+defineProps<{ to: RouteLocationRaw }>();
 </script>
 
 <template>
 	<NuxtLink :to="to">
-		{{ label }}
+		<slot />
 	</NuxtLink>
 </template>
 
@@ -20,7 +20,7 @@ a {
 
 	&:hover,
 	&[aria-current="page"] {
-		background: theme(grey, 90);
+		background: var(--bg-button-hover);
 	}
 
 	&[aria-current="page"] {
