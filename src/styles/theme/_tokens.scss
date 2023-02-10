@@ -1,20 +1,20 @@
 @use "../abstract" as *;
 
 :root {
-  // typography
-  --font-color-strong: var(--color-grey-10);
-  --font-color-default: var(--color-grey-30);
-  --font-color-light: var(--color-grey-50);
-  --font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+	// typography
+	--font-color-strong: var(--color-grey-10);
+	--font-color-default: var(--color-grey-30);
+	--font-color-light: var(--color-grey-50);
+	--font-family: Inter, ui-sans-serif, system-ui, sans-serif;
 
-  // backgrounds
-  --bg-page: var(--color-grey-100);
-  --bg-navbar-hsl: var(--color-grey-100-hsl);
-  --bg-bloc: linear-gradient(var(--color-grey-90), var(--color-grey-100) 130%);
+	// backgrounds
+	--bg-page: var(--color-grey-100);
+	--bg-navbar-hsl: var(--color-grey-100-hsl);
+	--bg-bloc: linear-gradient(var(--color-grey-90), var(--color-grey-100) 130%);
 
-  // easings
-  // https://material.io/archive/guidelines/motion/duration-easing.html
-  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-out: cubic-bezier(0, 0, 0.2, 1);
-  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+	// easings
+	// https://material.io/archive/guidelines/motion/duration-easing.html
+	--ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+	--ease-out: cubic-bezier(0, 0, 0.2, 1);
+	--ease-in: cubic-bezier(0.4, 0, 1, 1);
 }

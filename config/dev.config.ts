@@ -1,3 +1,3 @@
 export default {
-  environment: "dev"
+	environment: "dev"
 };

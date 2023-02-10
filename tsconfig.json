@@ -1,16 +1,16 @@
 {
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "strictNullChecks": false,
-    "paths": {
-      "~": ["src"],
-      "~/*": ["src/*"]
-    }
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "commonjs",
-      "esModuleInterop": true
-    }
-  }
+	"extends": "./.nuxt/tsconfig.json",
+	"compilerOptions": {
+		"strictNullChecks": false,
+		"paths": {
+			"~": ["src"],
+			"~/*": ["src/*"]
+		}
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"module": "commonjs",
+			"esModuleInterop": true
+		}
+	}
 }

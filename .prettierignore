@@ -15,5 +15,6 @@ node_modules
 .eslintignore
 .prettierignore
 .gitignore
+.editorconfig
 .eslintrc-auto-import.json
 pnpm-lock.yaml
