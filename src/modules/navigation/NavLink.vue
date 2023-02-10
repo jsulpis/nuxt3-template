@@ -14,7 +14,6 @@ defineProps<{ to: RouteLocationRaw }>();
 a {
 	padding: 0.5rem 1rem;
 	display: inline-block;
-	border-radius: 0.5rem;
 	letter-spacing: 0.03em;
 	transition: color 100ms, background-color 100ms;
 

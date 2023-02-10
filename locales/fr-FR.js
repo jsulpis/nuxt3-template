@@ -10,5 +10,8 @@ export default {
 			getStarted: "Démarrer",
 			seeOnGitHub: "Voir sur GitHub"
 		}
+	},
+	footer: {
+		madeBy: "Développé par"
 	}
 };
