@@ -5,6 +5,10 @@ export default {
 		dynamicPage: "Page dynamique"
 	},
 	home: {
-		title: "Template Nuxt 3 pour sites publiques"
+		title: "Template Nuxt 3 pour sites publiques",
+		cta: {
+			getStarted: "Démarrer",
+			seeOnGitHub: "Voir sur GitHub"
+		}
 	}
 };

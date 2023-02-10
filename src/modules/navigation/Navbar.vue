@@ -21,7 +21,9 @@ const routeNames = computed(() => {
 	<nav>
 		<ul>
 			<li v-for="name in routeNames" :key="name">
-				<NavLink :to="localePath({ name })" :label="$t(`nav.${name}`)" />
+				<NavLink :to="localePath({ name })">
+					{{ $t(`nav.${name}`) }}
+				</NavLink>
 			</li>
 		</ul>
 	</nav>
