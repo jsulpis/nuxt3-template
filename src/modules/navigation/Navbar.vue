@@ -31,7 +31,7 @@ const routeNames = computed(() => {
 
 <style lang="scss" scoped>
 nav {
-	padding-block: 2.5rem;
+	margin-bottom: 2.5rem;
 }
 
 ul {

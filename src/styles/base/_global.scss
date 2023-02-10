@@ -1,3 +1,5 @@
+@use "../abstract" as *;
+
 html {
 	color-scheme: dark;
 }
@@ -21,5 +23,8 @@ svg {
 button,
 a,
 [tabindex="0"] {
+	@include keyboard-focus;
+	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
+	border-radius: var(--border-radius-default);
 }

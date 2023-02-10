@@ -13,6 +13,8 @@
 	--bg-bloc: linear-gradient(var(--color-grey-90), var(--color-grey-100) 130%);
 	--bg-button-hover: #{theme(grey, 50, 0.1)};
 
+	--border-radius-default: 0.5rem;
+
 	// easings
 	// https://material.io/archive/guidelines/motion/duration-easing.html
 	--ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);

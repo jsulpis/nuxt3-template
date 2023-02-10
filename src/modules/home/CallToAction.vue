@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouteLocationRaw } from "vue-router";
 
-withDefaults(defineProps<{ to: RouteLocationRaw; variant: "primary" | "secondary" }>(), {
+withDefaults(defineProps<{ to: RouteLocationRaw; variant?: "primary" | "secondary" }>(), {
 	variant: "primary"
 });
 </script>
@@ -14,7 +14,6 @@ withDefaults(defineProps<{ to: RouteLocationRaw; variant: "primary" | "secondary
 
 <style lang="scss" scoped>
 a {
-	cursor: pointer;
 	color: var(--font-color-strong);
 	font-weight: bold;
 	display: inline-flex;
@@ -22,7 +21,6 @@ a {
 	align-items: center;
 	font-size: 0.875rem;
 	padding: 0.5em 1em;
-	border-radius: 0.5em;
 	border-width: 2px;
 	transition: background-color 100ms;
 
