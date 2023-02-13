@@ -13,7 +13,7 @@ export default defineNuxtConfig({
 	appConfig: isProd ? prodConfig : devConfig,
 	srcDir: "src",
 	css: ["@unocss/reset/tailwind.css", "@/styles/main.scss"],
-	modules: ["@vueuse/nuxt", "@nuxtjs/i18n", "nuxt-icon"],
+	modules: ["@vueuse/nuxt", "@nuxtjs/i18n", "@pinia/nuxt", "nuxt-icon"],
 	runtimeConfig: {
 		public: {
 			baseUrl

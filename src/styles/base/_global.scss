@@ -11,9 +11,16 @@ body {
 }
 
 html,
-body,
-#__nuxt {
+body {
 	height: 100%;
+}
+
+#__nuxt {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	padding-top: 2.5rem;
+	overflow: hidden;
+	min-height: 100%;
 }
 
 svg {
