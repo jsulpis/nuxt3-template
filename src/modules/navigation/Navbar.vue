@@ -12,7 +12,7 @@ const routeNames = computed(() => {
 	return new Set(
 		getRoutes()
 			.sort((r1, r2) => (r1.meta.navPosition as number) - (r2.meta.navPosition as number))
-			.map((route) => route.name.toString().split("_")[0])
+			.map((route) => route.name?.toString().split("_")[0])
 	);
 });
 </script>

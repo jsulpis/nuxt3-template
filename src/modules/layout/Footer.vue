@@ -28,6 +28,11 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	padding: 2rem 5vw;
+
+	@include phone-only {
+		flex-direction: column;
+		gap: 2rem;
+	}
 }
 
 .author a {

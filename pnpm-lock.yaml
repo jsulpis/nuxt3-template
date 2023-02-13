@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@fontsource/inter': 4.5.15
   '@nuxtjs/i18n': 8.0.0-beta.9
+  '@pinia/nuxt': 0.4.6
   '@types/node': 18.13.0
   '@unocss/reset': 0.49.4
   '@vue/eslint-config-prettier': 7.0.0
@@ -17,6 +18,7 @@ specifiers:
   npm-run-all: 4.1.5
   nuxt: 3.1.2
   nuxt-icon: 0.2.11
+  pinia: 2.0.30
   prettier: 2.8.3
   rimraf: 4.1.2
   sass: 1.58.0
@@ -28,9 +30,11 @@ specifiers:
 dependencies:
   '@fontsource/inter': 4.5.15
   '@nuxtjs/i18n': 8.0.0-beta.9_vue@3.2.47
+  '@pinia/nuxt': 0.4.6_hmuptsblhheur2tugfgucj7gc4
   '@vueuse/nuxt': 9.12.0_nuxt@3.1.2+vue@3.2.47
   nuxt: 3.1.2_4dx4yf6b6tm5ously3o557bqre
   nuxt-icon: 0.2.11_vue@3.2.47
+  pinia: 2.0.30_hmuptsblhheur2tugfgucj7gc4
   vue: 3.2.47
 
 devDependencies:
@@ -1237,6 +1241,19 @@ packages:
       - vue
       - vue-i18n-bridge
       - vue-router
+    dev: false
+
+  /@pinia/nuxt/0.4.6_hmuptsblhheur2tugfgucj7gc4:
+    resolution: {integrity: sha512-HjrYEfLdFpmsjhicPJgL36jVhzHWukIQPFFHGTSF84Cplu+f2nY2XHKqe9ToHzE9rLee2RjLOwAzOnXa/I/u6A==}
+    dependencies:
+      '@nuxt/kit': 3.1.2
+      pinia: 2.0.30_hmuptsblhheur2tugfgucj7gc4
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - rollup
+      - supports-color
+      - typescript
+      - vue
     dev: false
 
   /@planetscale/database/1.5.0:
@@ -4939,6 +4956,24 @@ packages:
     resolution: {integrity: sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==}
     engines: {node: '>=4'}
     dev: true
+
+  /pinia/2.0.30_hmuptsblhheur2tugfgucj7gc4:
+    resolution: {integrity: sha512-q6DUmxWwe/mQgg+55QQjykpKC+aGeGdaJV3niminl19V08dE+LRTvSEuqi6/NLSGCKHI49KGL6tMNEOssFiMyA==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.5.0
+      typescript: 4.9.5
+      vue: 3.2.47
+      vue-demi: 0.13.11_vue@3.2.47
+    dev: false
 
   /pkg-types/1.0.1:
     resolution: {integrity: sha512-jHv9HB+Ho7dj6ItwppRDDl0iZRYBD0jsakHXtFgoLr+cHSF6xC+QL54sJmWxyGxOLYSHm0afhXhXcQDQqH9z8g==}

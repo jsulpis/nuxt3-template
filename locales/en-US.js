@@ -13,5 +13,34 @@ export default {
 	},
 	footer: {
 		madeBy: "Made by"
+	},
+	features: {
+		core: {
+			title: "Core",
+			description:
+				"Nuxt 3, Vite, Pinia stores, VueUse functions, Sass theme, mixins and functions."
+		},
+		staticChecks: {
+			title: "Static checks",
+			description: "Types, format, lint with pre-commit hook."
+		},
+		testing: {
+			title: "Testing",
+			description: "Unit, Integration, e2e on multiple browsers."
+		},
+		seo: {
+			title: "SEOn, i18n",
+			description:
+				"robots.txt, sitemap.xml, Open Graph tags, i18n with automatic language detection."
+		},
+		ciCd: {
+			title: "CI / CD",
+			description:
+				"Pre-configured GitHub Actions workflows, continuous deployment on Vercel."
+		},
+		analytics: {
+			title: "Analytics",
+			description: "GDPR compliant traffic monitoring, no cookie banner required."
+		}
 	}
 };
