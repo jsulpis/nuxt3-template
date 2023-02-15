@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FeaturesList from "~/modules/features/FeaturesList.vue";
+import FeaturesList from "~/modules/home/FeaturesList.vue";
 import Hero from "~/modules/home/Hero.vue";
 
 definePageMeta({
@@ -11,5 +11,3 @@ definePageMeta({
 	<Hero />
 	<FeaturesList />
 </template>
-
-<style lang="scss" scoped></style>
