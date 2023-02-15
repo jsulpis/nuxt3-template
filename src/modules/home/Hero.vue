@@ -31,7 +31,6 @@ const localePath = useLocalePath();
 }
 
 h1 {
-	margin-block: 0.5rem 1.5rem;
 	text-align: center;
 	width: 15ch;
 }
