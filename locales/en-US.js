@@ -42,5 +42,12 @@ export default {
 			title: "Analytics",
 			description: "GDPR compliant traffic monitoring, no cookie banner required."
 		}
+	},
+	getStarted: {
+		installation: "Installation",
+		or: "Or",
+		fetch: "Fetch the project without git history:",
+		updateMeta: "Update the metadata in the translation files.",
+		useOnGitHub: "use this template on GitHub"
 	}
 };

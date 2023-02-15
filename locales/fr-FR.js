@@ -43,5 +43,12 @@ export default {
 			description:
 				"Mesure de traffic conforme au RGPD, pas de bannière de cookies nécessaire."
 		}
+	},
+	getStarted: {
+		installation: "Installation",
+		or: "Ou",
+		fetch: "Récupérer le projet sans l'historique git :",
+		updateMeta: "Mettre à jour les métadonnées dans les fichiers de traduction.",
+		useOnGitHub: "utiliser ce template sur GitHub"
 	}
 };
