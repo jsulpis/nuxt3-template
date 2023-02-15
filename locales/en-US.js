@@ -49,5 +49,12 @@ export default {
 		fetch: "Fetch the project without git history:",
 		updateMeta: "Update the metadata in the translation files.",
 		useOnGitHub: "use this template on GitHub"
+	},
+	dynamicPage: {
+		ssr: "This page displays dynamic data from the server using a Nuxt API route",
+		pageCache:
+			"When rendered server-side, the page has a cache-control header in order to be cached on the CDN",
+		apiCache: "When navigating client-side, the API call is cached too",
+		serverTime: "Server time:"
 	}
 };

@@ -17,5 +17,3 @@ defineI18nRoute({
 
 	<Installation />
 </template>
-
-<style lang="scss" scoped></style>

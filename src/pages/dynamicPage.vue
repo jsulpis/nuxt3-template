@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import DynamicContent from "../modules/dynamic-page/DynamicContent.vue";
+
 definePageMeta({
 	navPosition: 2
 });
@@ -12,6 +14,6 @@ defineI18nRoute({
 
 <template>
 	<h1>{{ $t("nav.dynamicPage") }}</h1>
-</template>
 
-<style lang="scss" scoped></style>
+	<DynamicContent />
+</template>
