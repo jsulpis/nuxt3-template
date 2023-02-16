@@ -19,8 +19,17 @@ body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	padding-top: 5rem;
-	overflow: hidden;
 	min-height: 100%;
+	background: radial-gradient(
+			150% 90% at 70% 50%,
+			hsl(156 84% 10% / 0.4) 0%,
+			hsl(240 4% 5% / 0) 50%
+		),
+		radial-gradient(
+			150% 90% at 30% 70%,
+			hsl(210 86% 11% / 0.4) 0%,
+			hsl(240 4% 5% / 0) 50%
+		);
 
 	@include tablet-portrait-up {
 		padding-top: 2.5rem;

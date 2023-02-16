@@ -28,6 +28,7 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	padding: 2rem 5vw;
+	position: relative;
 
 	@include phone-only {
 		flex-direction: column;
@@ -46,6 +47,8 @@ footer {
 	gap: 0.125rem;
 
 	a {
+		box-sizing: content-box;
+		height: 1.5rem;
 		border-radius: 50%;
 		padding: 0.5rem;
 		transition: background-color 100ms;

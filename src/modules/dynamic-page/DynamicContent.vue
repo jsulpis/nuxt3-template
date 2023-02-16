@@ -24,7 +24,7 @@ li {
 	line-height: 2;
 
 	&::marker {
-		content: "✓";
+		content: "✔";
 		color: lightgreen;
 	}
 }

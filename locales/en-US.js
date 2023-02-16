@@ -2,7 +2,8 @@ export default {
 	nav: {
 		index: "Home",
 		getStarted: "Get started",
-		dynamicPage: "Dynamic page"
+		dynamicPage: "Dynamic page",
+		skipNavigation: "Skip navigation"
 	},
 	home: {
 		title: "Nuxt 3 template for public websites",
