@@ -16,7 +16,6 @@ const { features } = storeToRefs(useFeatures());
 section {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: min(90%, 1400px);
 	gap: 2rem;
 	margin-block: 4rem;
 	justify-content: center;

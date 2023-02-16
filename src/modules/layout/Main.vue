@@ -12,6 +12,8 @@ main {
 	flex-direction: column;
 	align-items: center;
 	position: relative;
+	width: min(90%, 1400px);
+	margin-inline: auto;
 
 	&::before,
 	&::after {

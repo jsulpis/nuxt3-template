@@ -14,6 +14,9 @@ export default {
 	footer: {
 		madeBy: "Made by"
 	},
+	navbar: {
+		button: "Open or close the navigation"
+	},
 	features: {
 		core: {
 			title: "Core",

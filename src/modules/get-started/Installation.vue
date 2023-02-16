@@ -7,7 +7,7 @@ import CodeBlock from "./CodeBlock.vue";
 		<h2>{{ $t("getStarted.installation") }}</h2>
 		<ol>
 			<li>
-				<strong>1.</strong> {{ $t("getStarted.fetch") }}
+				{{ $t("getStarted.fetch") }}
 				<CodeBlock class="code">npx degit jsulpis/nuxtjs-template</CodeBlock>
 
 				<p>
@@ -18,7 +18,7 @@ import CodeBlock from "./CodeBlock.vue";
 				</p>
 			</li>
 
-			<li><strong>2.</strong> {{ $t("getStarted.updateMeta") }}</li>
+			<li>{{ $t("getStarted.updateMeta") }}</li>
 		</ol>
 	</section>
 </template>
@@ -28,8 +28,22 @@ section {
 	width: min(90%, 60ch);
 }
 
+ol {
+	list-style: revert;
+	padding-inline-start: 10px;
+
+	@include tablet-portrait-up {
+		padding-inline-start: 30px;
+	}
+}
+
 li {
 	margin-bottom: 2.5rem;
+
+	&::marker {
+		font-weight: bold;
+		color: var(--font-color-strong);
+	}
 }
 
 .code {
