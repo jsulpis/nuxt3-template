@@ -18,13 +18,21 @@ body {
 #__nuxt {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	padding-top: 2.5rem;
+	padding-top: 5rem;
 	overflow: hidden;
 	min-height: 100%;
+
+	@include tablet-portrait-up {
+		padding-top: 2.5rem;
+	}
 }
 
 svg {
 	display: inline-block;
+}
+
+[data-lock-scroll] {
+	overflow: hidden !important;
 }
 
 button,

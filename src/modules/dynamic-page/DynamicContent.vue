@@ -31,6 +31,6 @@ li {
 
 code {
 	font-size: 0.75rem;
-	margin-bottom: 20vh;
+	margin-bottom: 2.5rem;
 }
 </style>

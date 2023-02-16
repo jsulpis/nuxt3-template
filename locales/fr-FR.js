@@ -14,6 +14,9 @@ export default {
 	footer: {
 		madeBy: "Développé par"
 	},
+	navbar: {
+		button: "Ouvrir ou masquer la navigation"
+	},
 	features: {
 		core: {
 			title: "Base",
