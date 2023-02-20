@@ -39,7 +39,8 @@ export default {
 		},
 		ciCd: {
 			title: "CI / CD",
-			description: "Workflows GitHub Actions préconfigurés, déploiement continu sur Vercel."
+			description:
+				"Workflows GitHub Actions préconfigurés, déploiement continu sur Vercel."
 		},
 		analytics: {
 			title: "Mesure d'audience",
