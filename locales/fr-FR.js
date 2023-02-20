@@ -55,12 +55,25 @@ export default {
 		updateMeta: "Mettre à jour les métadonnées dans les fichiers de traduction.",
 		useOnGitHub: "utiliser ce template sur GitHub"
 	},
-
 	dynamicPage: {
 		ssr: "Cette page affiche une donnée dynamique du server en utilisant une route API de Nuxt",
 		pageCache:
 			"Lorsqu'elle est générée côté serveur, la page a un header cache-control pour être mise en cache sur le CDN",
 		apiCache: "Lors d'une navigation côté client, l'appel d'API est aussi mis en cache",
 		serverTime: "Heure du serveur :"
+	},
+	seo: {
+		index: {
+			title: "Template Nuxt 3 pour sites publics",
+			description: "Une base pour démarrer un projet simple."
+		},
+		getStarted: {
+			title: "Démarrage",
+			description: "Instructions d'installation."
+		},
+		dynamicPage: {
+			title: "Page dynamique",
+			description: "Exemple de page dynamique en SSR."
+		}
 	}
 };

@@ -5,16 +5,19 @@ import HeaderNavbar from "../modules/navigation/HeaderNavbar.vue";
 import MobileNavigation from "../modules/navigation/MobileNavigation.vue";
 import { useScrollRestoration } from "~/modules/a11y/useScrollRestoration";
 import SkipNavigationLink from "../modules/a11y/SkipNavigationLink.vue";
+import PageMetadata from "../modules/seo/PageMetadata.vue";
 
 useScrollRestoration();
 </script>
 
 <template>
-	<SkipNavigationLink />
-	<MobileNavigation />
-	<HeaderNavbar />
-	<Main>
-		<slot />
-	</Main>
-	<Footer />
+	<PageMetadata>
+		<SkipNavigationLink />
+		<MobileNavigation />
+		<HeaderNavbar />
+		<Main>
+			<slot />
+		</Main>
+		<Footer />
+	</PageMetadata>
 </template>

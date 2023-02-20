@@ -33,7 +33,7 @@ export default {
 			description: "Unit, Integration, e2e on multiple browsers."
 		},
 		seo: {
-			title: "SEOn, i18n",
+			title: "SEO, i18n",
 			description:
 				"robots.txt, sitemap.xml, Open Graph tags, i18n with automatic language detection."
 		},
@@ -60,5 +60,19 @@ export default {
 			"When rendered server-side, the page has a cache-control header in order to be cached on the CDN",
 		apiCache: "When navigating client-side, the API call is cached too",
 		serverTime: "Server time:"
+	},
+	seo: {
+		index: {
+			title: "Nuxt 3 template for public websites",
+			description: "A starter for simple projects."
+		},
+		getStarted: {
+			title: "Get started",
+			description: "Installation instructions."
+		},
+		dynamicPage: {
+			title: "Dynamic page",
+			description: "Example of dynamic page using SSR."
+		}
 	}
 };
