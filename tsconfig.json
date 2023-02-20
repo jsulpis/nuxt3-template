@@ -1,5 +1,12 @@
 {
 	"extends": "./.nuxt/tsconfig.json",
+	"compilerOptions": {
+		"paths": {
+			"~": ["src"],
+			"~/*": ["src/*"],
+			"#imports": [".nuxt/imports"]
+		}
+	},
 	"ts-node": {
 		"compilerOptions": {
 			"module": "commonjs",

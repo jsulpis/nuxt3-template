@@ -39,6 +39,9 @@ export default defineNuxtConfig({
 		}
 	},
 	nitro: {
+		handlers: process.env.MOCK
+			? [{ route: "", handler: "./__mocks__/mocks.handlers" }]
+			: undefined,
 		prerender: {
 			routes: ["/", "/fr", "get-started", "/fr/demarrage"]
 		}
