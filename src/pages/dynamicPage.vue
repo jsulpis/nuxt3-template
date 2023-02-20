@@ -14,6 +14,5 @@ defineI18nRoute({
 
 <template>
 	<h1>{{ $t("nav.dynamicPage") }}</h1>
-
 	<DynamicContent />
 </template>

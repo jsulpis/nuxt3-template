@@ -73,6 +73,14 @@ export default {
 		dynamicPage: {
 			title: "Dynamic page",
 			description: "Example of dynamic page using SSR."
+		},
+		404: {
+			title: "Page not found",
+			description: "This page does not exist."
 		}
+	},
+	errors: {
+		404: "This page does not exist.",
+		500: "Something happened to the server..."
 	}
 };
