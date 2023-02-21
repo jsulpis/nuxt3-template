@@ -41,6 +41,7 @@
 		"vue": "3.2.47"
 	},
 	"devDependencies": {
+		"@playwright/test": "1.30.0",
 		"@types/node": "18.14.0",
 		"@unocss/reset": "0.49.7",
 		"@vue/eslint-config-prettier": "7.0.0",
