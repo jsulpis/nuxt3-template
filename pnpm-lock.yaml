@@ -4,6 +4,7 @@ specifiers:
   '@fontsource/inter': 4.5.15
   '@nuxtjs/i18n': 8.0.0-beta.9
   '@pinia/nuxt': 0.4.7
+  '@playwright/test': 1.30.0
   '@types/node': 18.14.0
   '@unocss/reset': 0.49.7
   '@vue/eslint-config-prettier': 7.0.0
@@ -39,6 +40,7 @@ dependencies:
   vue: 3.2.47
 
 devDependencies:
+  '@playwright/test': 1.30.0
   '@types/node': 18.14.0
   '@unocss/reset': 0.49.7
   '@vue/eslint-config-prettier': 7.0.0_yrlhudqyxg2l7qvwle5bdpmrli
@@ -1326,6 +1328,15 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@playwright/test/1.30.0:
+    resolution: {integrity: sha512-SVxkQw1xvn/Wk/EvBnqWIq6NLo1AppwbYOjNLmyU0R1RoQ3rLEBtmjTnElcnz8VEtn11fptj1ECxK0tgURhajw==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      '@types/node': 18.14.0
+      playwright-core: 1.30.0
+    dev: true
 
   /@rollup/plugin-alias/4.0.3_rollup@3.17.2:
     resolution: {integrity: sha512-ZuDWE1q4PQDhvm/zc5Prun8sBpLJy41DMptYrS6MhAy9s9kL/doN1613BWfEchGVfKxzliJ3BjbOPizXX38DbQ==}
@@ -5160,6 +5171,12 @@ packages:
       mlly: 1.1.1
       pathe: 1.1.0
     dev: false
+
+  /playwright-core/1.30.0:
+    resolution: {integrity: sha512-7AnRmTCf+GVYhHbLJsGUtskWTE33SwMZkybJ0v6rqR1boxq2x36U7p1vDRV7HO2IwTZgmycracLxPEJI49wu4g==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /postcss-calc/8.2.4_postcss@8.4.21:
     resolution: {integrity: sha512-SmWMSJmB8MRnnULldx0lQIyhSNvuDl9HfrZkaqqE/WHAhToYsAvDq+yAsA/kIyINDszOp3Rh0GFoNuH5Ypsm3Q==}

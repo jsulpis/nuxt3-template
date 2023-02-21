@@ -3,7 +3,9 @@ import Navbar from "./Navbar.vue";
 </script>
 
 <template>
-	<Navbar />
+	<header>
+		<Navbar />
+	</header>
 </template>
 
 <style lang="scss" scoped>
