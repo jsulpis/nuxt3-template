@@ -10,17 +10,86 @@ on:
 
 jobs:
   Build:
-    name: Build
+    name: Build mock
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 7.14.2
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
           cache: pnpm
 
       - run: pnpm install
-      - run: pnpm build
+      - run: pnpm build:mock
+
+      - run: tar czf output.tar.gz .output
+      - uses: actions/upload-artifact@v3
+        with:
+          name: output
+          path: output.tar.gz
+          retention-days: 1
+
+  Static:
+    name: "Static Checks"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.14.2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: pnpm
+
+      - run: pnpm install
+      - run: pnpm typecheck
+      - run: pnpm format:check
+      - run: pnpm lint
+
+  E2E:
+    name: E2E - ${{ matrix.project }} (${{ matrix.browser }})
+    needs: Build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - project: chrome
+            browser: chromium
+          - project: firefox
+            browser: firefox
+          - project: safari
+            browser: webkit
+          - project: android
+            browser: chromium
+          - project: iphone
+            browser: webkit
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.14.2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: pnpm
+      - uses: actions/download-artifact@v3
+        with:
+          name: output
+      - run: tar xzf output.tar.gz
+
+      - run: pnpm install
+      - run: pnpm playwright install --with-deps ${{ matrix.browser }}
+      - run: pnpm playwright test --project=${{ matrix.project }}
+
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: ${{ matrix.project }}-test-results
+          path: playwright-report/
+          retention-days: 7

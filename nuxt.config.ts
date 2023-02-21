@@ -43,7 +43,7 @@ export default defineNuxtConfig({
 			? [{ route: "", handler: "./__mocks__/mocks.handlers" }]
 			: undefined,
 		prerender: {
-			routes: ["/", "/fr", "get-started", "/fr/demarrage"]
+			routes: ["/", "/fr", "/get-started", "/fr/demarrage"]
 		}
 	},
 	vite: {
