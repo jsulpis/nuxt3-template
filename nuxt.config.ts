@@ -5,7 +5,7 @@ import frFR from "./locales/fr-FR";
 
 const isProd = process.env.VERCEL_ENV === "production";
 const baseUrl = isProd
-	? "https://nuxt3-template-jsulpis.vercel.app/"
+	? "https://nuxt3-template-jsulpis.vercel.app"
 	: `https://${process.env.VERCEL_URL || "localhost:3000"}`;
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -19,17 +19,29 @@ export default defineNuxtConfig({
 		"@pinia/nuxt",
 		"nuxt-icon",
 		"@nuxtjs/robots",
-		"nuxt-simple-sitemap"
+		"nuxt-simple-sitemap",
+		"@nuxtjs/plausible"
 	],
 	runtimeConfig: {
 		public: {
 			baseUrl
 		}
 	},
+	experimental: {
+		inlineSSRStyles: false // avoid duplicating the styles (inline + external css files)
+	},
+	robots: {
+		rules: {
+			Sitemap: `${baseUrl}/sitemap.xml`
+		}
+	},
 	sitemap: {
 		hostname: baseUrl,
 		exclude: ["/getStarted", "/dynamicPage"],
 		urls: () => ["/dynamic-page", "/fr/page-dynamique"]
+	},
+	plausible: {
+		apiHost: baseUrl
 	},
 	i18n: {
 		baseUrl,
