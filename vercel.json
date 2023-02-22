@@ -1,0 +1,8 @@
+{
+	"rewrites": [
+		{
+			"source": "/api/event",
+			"destination": "https://plausible.io/api/event"
+		}
+	]
+}
