@@ -2,7 +2,7 @@
 import DynamicContent from "../modules/dynamic-page/DynamicContent.vue";
 
 definePageMeta({
-	navPosition: 2
+	navPosition: 1
 });
 defineI18nRoute({
 	paths: {

@@ -2,7 +2,6 @@ import { test, expect } from "@playwright/test";
 
 test.describe("Navigation @desktop", () => {
 	const pages = [
-		{ path: "/get-started", label: "Get started" },
 		{ path: "/dynamic-page", label: "Dynamic page" },
 		{ path: "/", label: "Home" }
 	];

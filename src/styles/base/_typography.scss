@@ -53,9 +53,3 @@ p,
 	letter-spacing: 0.015em;
 	color: var(--font-color-default);
 }
-
-@each $color in (strong, default, light) {
-	.text-#{$color} {
-		color: var(--font-color-#{$color});
-	}
-}

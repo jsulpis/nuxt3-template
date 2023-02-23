@@ -28,7 +28,7 @@ a {
 	}
 
 	&:focus-visible {
-		outline: 2px solid theme(primary, 50);
+		outline: 2px solid color(primary, 50);
 		outline-offset: 0;
 	}
 }

@@ -29,7 +29,7 @@ test.describe("Keyboard navigation on @desktop", () => {
 		await page.keyboard.press("Tab");
 
 		const header = page.getByRole("banner");
-		await expect(header.getByRole("link", { name: "Get started" })).toBeFocused();
+		await expect(header.getByRole("link", { name: "Dynamic page" })).toBeFocused();
 
 		await page.keyboard.press("Enter");
 

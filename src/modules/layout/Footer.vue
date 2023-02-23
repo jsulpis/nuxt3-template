@@ -7,7 +7,10 @@ import LangSwitch from "../i18n/LangSwitch.vue";
 		<LangSwitch />
 
 		<span class="author">
-			<span>{{ $t("footer.madeBy") }}</span>
+			<a href="https://nuxt3-template-jsulpis.vercel.app/">
+				{{ $t("footer.nuxtTemplate") }}
+			</a>
+			<span>{{ $t("footer.by") }}</span>
 			<a href="https://twitter.com/jsulpis">@jsulpis</a>
 		</span>
 
@@ -36,10 +39,14 @@ footer {
 	}
 }
 
-.author a {
-	color: var(--font-color-strong);
-	font-weight: bold;
-	margin-left: 0.25em;
+.author {
+	display: inline-flex;
+	gap: 4px;
+
+	a {
+		color: var(--font-color-strong);
+		font-weight: bold;
+	}
 }
 
 .icons {
