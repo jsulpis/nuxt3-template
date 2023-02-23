@@ -1,116 +1,142 @@
 <span align="center">
   
-<h1>Nuxt.js Template</h1>
-<h3>Full-featured template for JAMstack websites using nuxt.js</h3>
+<h1>Nuxt 3 Template</h1>
+<h3>Optimized for public websites</h3>
 
 <p>
   
-[![Build Status](https://travis-ci.org/jsulpis/nuxtjs-template.svg?branch=master)](https://travis-ci.org/jsulpis/nuxtjs-template)
+[![CI](https://github.com/jsulpis/nuxt3-template/actions/workflows/ci.yml/badge.svg)](https://github.com/jsulpis/nuxt3-template/actions/workflows/ci.yml)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 </p>
 
-<a href="https://nuxtjs-template.netlify.app">
-  <img class="repo-preview" src="https://raw.githubusercontent.com/jsulpis/nuxtjs-template/master/preview.png" alt="Screenshot image"/>
+<a href="https://nuxt3-template-jsulpis.vercel.app">
+  <img src="https://raw.githubusercontent.com/jsulpis/nuxt3-template/master/preview.jpg" alt="Screenshot of the website"/>
 </a>
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjsulpis%2Fnuxt3-template&demo-title=Nuxt%203%20template&demo-description=Template%20for%20public%20websites&demo-url=https%3A%2F%2Fnuxt3-template-jsulpis.vercel.app&demo-image=https%3A%2F%2Fraw.githubusercontent.com%2Fjsulpis%2Fnuxt3-template%2Fmaster%2Fpreview.jpg)
 
 </span>
 
-**Deploy your own copy of this project on Netlify in just a few clicks:**
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jsulpis/nuxtjs-template)
-
 ## About
 
-I built this template with all the tools I found useful to develop my own personal projects, so it can be a bit biased. If you find something that you think is not relevant or could be improved, please open an issue or a pull request to fix it.
+I built this template with all the tools I use in my own personal projects, in order to have a solid starting point for new projects, and hopefully for other developers to benefit from it. I did my best to build the skeleton of what I think is a solid website with proper accessibility, SEO, performance etc.
+
+You can see this template in action on my [photography portfolio](https://www.jsulpis.photos).
+
+Be aware that this template might quickly become out of date because the web is moving fast !
+
+### Why 'public websites' ?
+
+My side projects are simple public websites, mostly static, with a few simple APIs (contact, fetch data...). This template is optimized for this kind of project.
+
+If you are starting something more complex that needs a full backend with database, authentication etc, I suggest that you give a look at [sidebase](https://sidebase.io/).
 
 ## Features
 
-**Vue.js + TypeScript**
+**Core**
 
-- Because I love strongly typed languages (I'm a bit of a java developer at heart)
+- [Nuxt 3](https://nuxt.com/), powered by [Vite](https://vitejs.dev/) and [Nitro](https://nitro.unjs.io/) (among others), auto-imports, API routes
+- State management with [Pinia](https://pinia.vuejs.org/) stores
+- [VueUse](https://vueuse.org/) functions
+- Sass theme, functions and mixins for common use cases
 
-**Linting**
+**Performance**
 
-- Don't bother with linting ever again. Let Prettier handle it for you. Pre-commit hook included to lint your staged files.
+- Hybrid rendering: combination of SSG and SSR depending on the routes
+- Cache-Control header pre-configured on API and SSR routes using a Nuxt [server middleware](https://nuxt.com/docs/guide/directory-structure/server#server-middleware)
+- Self-hosted fonts using [Fontsource](https://fontsource.org/)
 
-**Testing Setup**
+**Static checks**
 
-- Unit tests with Jest and Vue Test Utils
-- E2e tests with Cypress (runs in the CI)
+- Typescript everywhere
+- eslint, prettier
+- pre-commit hook for lint and format
 
-**UI**
+**Testing**
 
-- Multiple color themes
-- Leverage the power of Tailwind CSS to build beautiful interfaces. You will find a Tailwind config file that you can customize to build your own theme.
-- You can also use conventional scss style in the components.
-- FontAwesome icons ready to use.
+- E2e tests on multiple browsers, desktop and mobile, using [Playwright](https://playwright.dev/)
+- Script that fetches the API data and stores it in local files in order to run the app in "mock" mode. It is used for the e2e tests but can be run in standalone, for offline development for instance.
+
+**i18n**
+
+- multiple languages support with the [@nuxtjs/i18n](https://nuxt.com/modules/i18n) module
+- language switch
+- automatic language detection and redirection using [Vercel Edge Middleware](https://vercel.com/docs/concepts/functions/edge-middleware)
+- meta and link tags for SEO (`og:locale`, `hreflang`...)
 
 **SEO**
 
-- Populate each page header metadata with name, description, image, etc.
+- meta tags automatically setup for all pages, using titles and descriptions from translation files
+- robots.txt, sitemap.xml
 
 **Accessibility**
 
-- i18n preconfigured with two locales (English and French)
+- accessible navigation provided by default for desktop and mobile
+- 'Skip navigation' link for keyboard users
 
-**PWA**
+**CI / CD**
 
-- Users can install the application on their device and run it offline
+- GitHub Action workflow pre-configured on PRs and main branch to run all static checks and tests
+- Ready to deploy on Vercel (see the [Deployment](https://github.com/jsulpis/nuxt3-template#deployment) section below)
 
-**Deployment**
+**Analytics**
 
-- Example of CI with Travis-CI
-- Ready to deploy on Netlify using git integration
+- integration of [Plausible](https://plausible.io), which is the only paid service here: you can use something else (or nothing at all), but I chose this one because it is GDPR compliant without the need for a cookie banner, it has a lightweight script, a nice clean UI with only relevant data, and unlimited data retention.
 
 ## Installation
 
-Clone the repository and install the dependencies:
+**Using GitHub**
+
+Click on the button 'Use this template' at the top of this page
+
+**Using your terminal**
 
 ```shell
-git clone https://github.com/jsulpis/nuxtjs-template.git && cd nuxtjs-template && yarn
+npx degit jsulpis/nuxt3-template#starter your-project
+```
+
+```shell
+cd your-project && pnpm install
 ```
 
 ## Usage
 
 ### Development
 
-Serve with hot reload at localhost:3000.
+Start the development server with hot module replacement:
 
-```
-yarn dev
-```
-
-### Build
-
-If you want a JAMstack website: generate a fully static project with pre-rendered pages to put directly on a server or any hosting platform.
-
-```
-yarn generate
+```bash
+pnpm dev
 ```
 
-If you want to serve your website with SSR:
+See the other scripts in the `package.json`.
 
+### Production
+
+Build the application for production:
+
+```bash
+pnpm build
 ```
-yarn build
-yarn start
+
+Locally preview the production build:
+
+```bash
+pnpm preview
 ```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
 ## Deployment
 
-This template is ready to be deployed on Netlify:
+You can connect Vercel and GitHub to deploy each branch and pull request to their own environment, and the main branch in production:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jsulpis/nuxtjs-template)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjsulpis%2Fnuxt3-template&demo-title=Nuxt%203%20template&demo-description=Template%20for%20public%20websites&demo-url=https%3A%2F%2Fnuxt3-template-jsulpis.vercel.app&demo-image=https%3A%2F%2Fraw.githubusercontent.com%2Fjsulpis%2Fnuxt3-template%2Fmaster%2Fpreview.jpg)
 
-See the `Deployment` section of the [documentation](https://nuxtjs-template.netlify.app/documentation) for more information.
-
-You can integrate Netlify with your GitHub account, which will allow it to deploy each branch and pull request to their own environment, and the master branch in production.
-
-## Configuration
-
-See the [documentation](https://nuxtjs-template.netlify.app/documentation)
+Note that you should be able to deploy this template on another cloud provider (Nuxt 3 supports [a lot of them](https://nuxt.com/docs/getting-started/deployment#supported-hosting-providers)), but you will have to do the redirection of the users based on their language, which is currently implemented with Vercel Edge Middleware.
 
 ## License
 
-Although you don't _have_ to, if you reuse this template for your projects I would appreciate it if you would credit me and provide a link to my GitHub profile in the footer. Thanks !
+Released under the [MIT](https://github.com/jsulpis/nuxt3-template/blob/master/LICENSE) license.
 
-Released under the [MIT](https://github.com/jsulpis/nuxtjs-template/blob/master/LICENSE) license.
+Although you don't _have_ to, if you reuse this template for your projects I would appreciate if you would add a little note like '_[Nuxt 3](https://nuxt3-template-jsulpis.vercel.app) template by [@jsulpis](https://twitter.com/jsulpis)_' in your footer. Thanks !

@@ -15,7 +15,7 @@ const localePath = useLocalePath();
 				{{ $t("home.cta.getStarted") }}
 			</CallToAction>
 
-			<CallToAction to="https://github.com/jsulpis/nuxtjs-template" variant="secondary">
+			<CallToAction to="https://github.com/jsulpis/nuxt3-template" variant="secondary">
 				{{ $t("home.cta.seeOnGitHub") }}
 				<Icon name="bx:bxs-chevron-right" size="14px" />
 			</CallToAction>

@@ -30,11 +30,7 @@ const featuresData = [
 	},
 	{
 		name: "testing",
-		icons: [
-			{ name: "logos:vitest", label: "Vitest" },
-			{ name: "logos:testing-library", label: "Testing Library" },
-			{ name: "logos:playwright", label: "Playwright" }
-		]
+		icons: [{ name: "logos:playwright", label: "Playwright" }]
 	},
 	{
 		name: "seo",

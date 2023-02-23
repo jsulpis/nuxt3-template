@@ -2,7 +2,14 @@
 	"name": "nuxt3-template",
 	"private": "true",
 	"description": "Nuxt 3 Template for public websites",
-	"author": "Julien Sulpis",
+	"repository": {
+		"url": "https://github.com/jsulpis/nuxt3-template"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Julien Sulpis",
+		"url": "https://twitter.com/jsulpis"
+	},
 	"scripts": {
 		"postinstall": "husky install && nuxt prepare",
 		"analyze": "nuxt analyze",
