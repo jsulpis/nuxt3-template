@@ -30,7 +30,7 @@ export default {
 		},
 		testing: {
 			title: "Testing",
-			description: "Unit, Integration, e2e on multiple browsers."
+			description: "E2e tests on multiple browsers with Playwright."
 		},
 		seo: {
 			title: "SEO, i18n",
@@ -49,10 +49,15 @@ export default {
 	},
 	getStarted: {
 		installation: "Installation",
-		or: "Or",
 		fetch: "Fetch the project without git history:",
-		updateMeta: "Update the metadata in the translation files.",
-		useOnGitHub: "use this template on GitHub"
+		initGit: "then in the new folder, run 'git init' to create a new repository.",
+		install: "Install the dependencies with pnpm install.",
+		run: "Run the project with pnpm dev.",
+		updateMeta:
+			"Update the translation files and the pseudo {'@'}jsulpis in the PageMetadata component.",
+		or: "Or",
+		useOnGitHub: "use this template on GitHub",
+		clone: "and clone your new project with git"
 	},
 	dynamicPage: {
 		ssr: "This page displays dynamic data from the server using a Nuxt API route",

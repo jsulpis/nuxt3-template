@@ -37,7 +37,6 @@ export default defineNuxtConfig({
 	},
 	sitemap: {
 		hostname: baseUrl,
-		exclude: ["/getStarted", "/dynamicPage"],
 		urls: () => ["/dynamic-page", "/fr/page-dynamique"]
 	},
 	plausible: {

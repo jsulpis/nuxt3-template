@@ -7,18 +7,26 @@ import CodeBlock from "./CodeBlock.vue";
 		<h2>{{ $t("getStarted.installation") }}</h2>
 		<ol>
 			<li>
-				{{ $t("getStarted.fetch") }}
-				<CodeBlock class="code">npx degit jsulpis/nuxtjs-template</CodeBlock>
+				<p>
+					{{ $t("getStarted.fetch") }}
+					<CodeBlock class="code">
+						npx degit jsulpis/nuxt3-template#starter your-project
+					</CodeBlock>
+					{{ $t("getStarted.initGit") }}
+				</p>
+				<br />
 
 				<p>
 					{{ $t("getStarted.or") }}
-					<a href="https://github.com/jsulpis/nuxtjs-template">
-						{{ $t("getStarted.useOnGitHub") }} </a
-					>.
+					<a href="https://github.com/jsulpis/nuxt3-template/generate">
+						{{ $t("getStarted.useOnGitHub") }}
+					</a>
+					{{ $t("getStarted.clone") }}.
 				</p>
 			</li>
-
+			<li>{{ $t("getStarted.install") }}</li>
 			<li>{{ $t("getStarted.updateMeta") }}</li>
+			<li>{{ $t("getStarted.run") }}</li>
 		</ol>
 	</section>
 </template>
