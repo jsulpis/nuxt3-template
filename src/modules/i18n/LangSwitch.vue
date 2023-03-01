@@ -15,7 +15,9 @@ const languageLinks = computed(() =>
 <template>
 	<ul>
 		<li v-for="{ label, to } in languageLinks" :key="label">
-			<NuxtLink :to="to" :aria-label="label">{{ label?.substring(0, 2) }}</NuxtLink>
+			<NuxtLink :to="to" :aria-label="label" :title="label">
+				{{ label?.substring(0, 2) }}
+			</NuxtLink>
 		</li>
 	</ul>
 </template>

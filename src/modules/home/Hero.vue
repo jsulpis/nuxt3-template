@@ -11,8 +11,8 @@ const localePath = useLocalePath();
 		<h1>{{ $t("home.title") }}</h1>
 
 		<div class="cta-container">
-			<CallToAction :to="localePath('getStarted')">
-				{{ $t("home.cta.getStarted") }}
+			<CallToAction :to="localePath('get-started')">
+				{{ $t("home.cta.get-started") }}
 			</CallToAction>
 
 			<CallToAction to="https://github.com/jsulpis/nuxt3-template" variant="secondary">
