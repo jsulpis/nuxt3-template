@@ -4,12 +4,12 @@ const { data } = await useLazyFetch("/api/data");
 
 <template>
 	<ul>
-		<li>{{ $t("dynamicPage.ssr") }}</li>
-		<li>{{ $t("dynamicPage.pageCache") }}</li>
-		<li>{{ $t("dynamicPage.apiCache") }}</li>
+		<li>{{ $t("dynamic-page.ssr") }}</li>
+		<li>{{ $t("dynamic-page.pageCache") }}</li>
+		<li>{{ $t("dynamic-page.apiCache") }}</li>
 	</ul>
 
-	<strong>{{ $t("dynamicPage.serverTime") }}</strong>
+	<strong>{{ $t("dynamic-page.serverTime") }}</strong>
 	<code>{{ data?.datetime || "..." }}</code>
 </template>
 

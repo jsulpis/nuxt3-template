@@ -13,6 +13,6 @@ defineI18nRoute({
 </script>
 
 <template>
-	<h1>{{ $t("nav.dynamicPage") }}</h1>
+	<h1>{{ $t("nav.dynamic-page") }}</h1>
 	<DynamicContent />
 </template>

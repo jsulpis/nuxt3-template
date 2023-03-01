@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Installation from "../modules/get-started/Installation.vue";
+import InstallationContent from "../modules/get-started/InstallationContent.vue";
 
 definePageMeta({
 	navPosition: 1
@@ -13,6 +13,6 @@ defineI18nRoute({
 </script>
 
 <template>
-	<h1>{{ $t("nav.getStarted") }}</h1>
-	<Installation />
+	<h1>{{ $t("nav.get-started") }}</h1>
+	<InstallationContent />
 </template>

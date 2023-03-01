@@ -1,14 +1,14 @@
 export default {
 	nav: {
 		index: "Home",
-		getStarted: "Get started",
-		dynamicPage: "Dynamic page",
+		"get-started": "Get started",
+		"dynamic-page": "Dynamic page",
 		skipNavigation: "Skip navigation"
 	},
 	home: {
 		title: "Nuxt 3 template for public websites",
 		cta: {
-			getStarted: "Get started",
+			"get-started": "Get started",
 			seeOnGitHub: "See on GitHub"
 		}
 	},
@@ -47,22 +47,10 @@ export default {
 			description: "GDPR compliant traffic monitoring, no cookie banner required."
 		}
 	},
-	getStarted: {
-		installation: "Installation",
-		fetch: "Fetch the project without git history:",
-		initGit: "then in the new folder, run 'git init' to create a new repository.",
-		install: "Install the dependencies with pnpm install.",
-		run: "Run the project with pnpm dev.",
-		updateMeta:
-			"Update the translation files and the pseudo {'@'}jsulpis in the PageMetadata component.",
-		or: "Or",
-		useOnGitHub: "use this template on GitHub",
-		clone: "and clone your new project with git"
-	},
-	dynamicPage: {
+	"dynamic-page": {
 		ssr: "This page displays dynamic data from the server using a Nuxt API route",
 		pageCache:
-			"When rendered server-side, the page has a cache-control header in order to be cached on the CDN",
+			"When rendered server-side (SSR), the page has a cache-control header in order to be cached on the CDN",
 		apiCache: "When navigating client-side, the API call is cached too",
 		serverTime: "Server time:"
 	},
@@ -71,11 +59,11 @@ export default {
 			title: "Nuxt 3 template for public websites",
 			description: "A starter for simple projects."
 		},
-		getStarted: {
+		"get-started": {
 			title: "Get started",
 			description: "Installation instructions."
 		},
-		dynamicPage: {
+		"dynamic-page": {
 			title: "Dynamic page",
 			description: "Example of dynamic page using SSR."
 		},

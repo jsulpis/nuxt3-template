@@ -87,9 +87,13 @@ If you are starting something more complex that needs a full backend with databa
 
 **Using GitHub**
 
-Click on the button 'Use this template' at the top of this page
+Click on the button 'Use this template' at the top of this page.
+
+Please check 'Include all branches' in order to have the starter branch, which is the pristine template without the demo and documentation.
 
 **Using your terminal**
+
+Fetch the starter branch without all the git history:
 
 ```shell
 npx degit jsulpis/nuxt3-template#starter your-project
@@ -109,23 +113,13 @@ Start the development server with hot module replacement:
 pnpm dev
 ```
 
+Start in mock mode:
+
+```bash
+pnpm dev:mock
+```
+
 See the other scripts in the `package.json`.
-
-### Production
-
-Build the application for production:
-
-```bash
-pnpm build
-```
-
-Locally preview the production build:
-
-```bash
-pnpm preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
 ## Deployment
 
@@ -134,6 +128,8 @@ You can connect Vercel and GitHub to deploy each branch and pull request to thei
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjsulpis%2Fnuxt3-template&demo-title=Nuxt%203%20template&demo-description=Template%20for%20public%20websites&demo-url=https%3A%2F%2Fnuxt3-template-jsulpis.vercel.app&demo-image=https%3A%2F%2Fraw.githubusercontent.com%2Fjsulpis%2Fnuxt3-template%2Fmaster%2Fpreview.jpg)
 
 Note that you should be able to deploy this template on another cloud provider (Nuxt 3 supports [a lot of them](https://nuxt.com/docs/getting-started/deployment#supported-hosting-providers)), but you will have to do the redirection of the users based on their language, which is currently implemented with Vercel Edge Middleware.
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
 ## License
 

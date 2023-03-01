@@ -1,14 +1,14 @@
 export default {
 	nav: {
 		index: "Accueil",
-		getStarted: "Démarrage",
-		dynamicPage: "Page dynamique",
+		"get-started": "Démarrage",
+		"dynamic-page": "Page dynamique",
 		skipNavigation: "Sauter la navigation"
 	},
 	home: {
 		title: "Template Nuxt 3 pour sites publics",
 		cta: {
-			getStarted: "Démarrer",
+			"get-started": "Démarrer",
 			seeOnGitHub: "Voir sur GitHub"
 		}
 	},
@@ -48,23 +48,10 @@ export default {
 				"Mesure de traffic conforme au RGPD, pas de bannière de cookies nécessaire."
 		}
 	},
-	getStarted: {
-		installation: "Installation",
-		fetch: "Récupérer le projet sans l'historique git :",
-		initGit:
-			"puis dans le nouveau dossier, lancer 'git init' pour créer un nouveau répertoire git.",
-		install: "Installer les dépendances avec pnpm install.",
-		run: "Lancer l'application avec pnpm dev.",
-		updateMeta:
-			"Mettre à jour les fichiers de traduction et le pseudo {'@'}jsulpis dans le composant PageMetadata.",
-		or: "Ou",
-		useOnGitHub: "utiliser ce template sur GitHub",
-		clone: "et cloner votre nouveau projet avec git"
-	},
-	dynamicPage: {
+	"dynamic-page": {
 		ssr: "Cette page affiche une donnée dynamique du server en utilisant une route API de Nuxt",
 		pageCache:
-			"Lorsqu'elle est générée côté serveur, la page a un header cache-control pour être mise en cache sur le CDN",
+			"Lorsqu'elle est générée côté serveur (SSR), la page a un header cache-control pour être mise en cache sur le CDN",
 		apiCache: "Lors d'une navigation côté client, l'appel d'API est aussi mis en cache",
 		serverTime: "Heure du serveur :"
 	},
@@ -73,11 +60,11 @@ export default {
 			title: "Template Nuxt 3 pour sites publics",
 			description: "Une base pour démarrer un projet simple."
 		},
-		getStarted: {
+		"get-started": {
 			title: "Démarrage",
 			description: "Instructions d'installation."
 		},
-		dynamicPage: {
+		"dynamic-page": {
 			title: "Page dynamique",
 			description: "Exemple de page dynamique en SSR."
 		},

@@ -8,7 +8,11 @@ const { copy, copied } = useClipboard();
 
 <template>
 	<code>
-		<slot />
+		<span>
+			<Icon name="ic:round-chevron-right" class="chevron" />
+			<slot />
+		</span>
+
 		<button @click="copy(slotContent)">
 			<Icon
 				:name="copied ? 'mdi:check-bold' : 'material-symbols:content-copy'"
@@ -30,9 +34,17 @@ code {
 	font-size: 0.75rem;
 
 	@include tablet-portrait-up {
-		padding-inline: 2rem;
+		padding-inline: 0.5rem 2rem;
 		font-size: 0.9rem;
 	}
+}
+
+.chevron {
+	height: 1.2rem;
+	width: auto;
+	color: lightgreen;
+	margin-right: 0.5rem;
+	transform: scaleY(0.9);
 }
 
 button {
