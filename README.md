@@ -45,6 +45,7 @@ If you are starting something more complex that needs a full backend with databa
 - Hybrid rendering: combination of SSG and SSR depending on the routes
 - Cache-Control header pre-configured on API and SSR routes using a Nuxt [server middleware](https://nuxt.com/docs/guide/directory-structure/server#server-middleware)
 - Self-hosted fonts using [Fontsource](https://fontsource.org/)
+- [100% Lighthouse score](https://pagespeed.web.dev/report?url=https%3A%2F%2Fnuxt3-template-jsulpis.vercel.app%2F&hl=fr&form_factor=desktop) on desktop, 97 on mobile
 
 **Static checks**
 
